@@ -1,0 +1,10 @@
+Xterminal v1.0.x
+December 22, 2002
+TO-DO: Future development ideas
+
+- test (port?) on more platforms
+- implement window resize in XtWindow
+- add line wrapping in XtTextViewer
+- improve XtTextViewer's file reading
+- implement a clipboard in text fields
+  (suggested by Dedov Anton <bada@prgn.ru>)

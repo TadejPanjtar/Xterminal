@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XObjectEventListener</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.3.17-pre4">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>class  <A HREF="#DOC.DOCU">XObjectEventListener</A>: public <!1><A HREF="XEventListener.html">XEventListener</A></H2>
+<BLOCKQUOTE>Listener for registration at broker</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<H3>XObjectEventListener
+- <A HREF="XEventListener.html">XEventListener</A>
+</H3>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.13.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DD><I>Receives incoming events and distributes them between the following processing methods.</I>
+<DT>
+<A HREF="#DOC.13.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessMouseEvent</B>(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)
+<DD><I>Process a mouse event (<b>EV_MOUSE</b>).</I>
+<DT>
+<A HREF="#DOC.13.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessKeyboardEvent</B>(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)
+<DD><I>Process a keyboard event (<b>EV_KEYBOARD</b>)</I>
+<DT>
+<A HREF="#DOC.13.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessMessage</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DD><I>Process a message (<i>EV_MESSAGE</i>)</I>
+<DT>
+<A HREF="#DOC.13.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessCommand</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DD><I>Process a command (<i>EV_COMMAND</i>)</I>
+<DT>
+<A HREF="#DOC.13.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessSignal</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DD><I>Process a signal (<i>EV_SIGNAL</i>)</I>
+<DT>
+<A HREF="#DOC.13.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessBroadcast</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DD><I>Process a broadcast event (<i>EV_BROADCAST</i>)</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventListener.html">XEventListener</A>:</H3>
+<DL>
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Listener for registration at broker</BLOCKQUOTE>
+<DL>
+
+<A NAME="ProcessEvent">
+<A NAME="DOC.13.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessEvent(<!1><A HREF="XEvent.html">XEvent</A> *__Event)</B></TT>
+<DD>Receives incoming events and distributes them between the following
+processing methods.
+
+These methods should be overloaded for active objects, of course only for
+event classes the respective object cares. If the object treats the event,
+these functions must returns true, otherwise false. That's because
+Xterminal can't figure out all the times which object an event is for.
+Instead, events are passed to all registered listeners and then objects
+are watched to see which is responding to it (an example of such event is
+an mouse event). Once the event gets processed, the remaining listeners
+does not receive it any more.
+<DL><DT><DD></DL><P>
+<A NAME="ProcessMouseEvent">
+<A NAME="DOC.13.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessMouseEvent(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)</B></TT>
+<DD>Process a mouse event (<b>EV_MOUSE</b>).
+Be careful with this kind of events because you <b>must</b> check if the
+mouse pointer is inside object's bounds, otherwise you must return false!
+<DL><DT><DD></DL><P>
+<A NAME="ProcessKeyboardEvent">
+<A NAME="DOC.13.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessKeyboardEvent(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)</B></TT>
+<DD>Process a keyboard event (<b>EV_KEYBOARD</b>)
+<DL><DT><DD></DL><P>
+<A NAME="ProcessMessage">
+<A NAME="DOC.13.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessMessage(<!1><A HREF="XMessage.html">XMessage</A> *__Event)</B></TT>
+<DD>Process a message (<i>EV_MESSAGE</i>)
+<DL><DT><DD></DL><P>
+<A NAME="ProcessCommand">
+<A NAME="DOC.13.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessCommand(<!1><A HREF="XMessage.html">XMessage</A> *__Event)</B></TT>
+<DD>Process a command (<i>EV_COMMAND</i>)
+<DL><DT><DD></DL><P>
+<A NAME="ProcessSignal">
+<A NAME="DOC.13.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessSignal(<!1><A HREF="XEvent.html">XEvent</A> *__Event)</B></TT>
+<DD>Process a signal (<i>EV_SIGNAL</i>)
+<DL><DT><DD></DL><P>
+<A NAME="ProcessBroadcast">
+<A NAME="DOC.13.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessBroadcast(<!1><A HREF="XEvent.html">XEvent</A> *__Event)</B></TT>
+<DD>Process a broadcast event (<i>EV_BROADCAST</i>)
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="XObject.html">XObject</A><BR>
+</DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998 <a href="mailto:slice@t-online.de">Bernd Kalbfuss</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

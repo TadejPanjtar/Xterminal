@@ -1,0 +1,677 @@
+Xterminal v1.0.7
+December 22, 2002
+ChangeLog: Xterminal's History
+
+Sun 22 Dec 2002 04:43:11 PM EET
+    * 1.0.7 released
+    + xtlist.cc: fixed XtList::GetSelected()
+    + xtfield.cc: fixed ~XtInputStringField()
+      (patches by Dedov Anton <bada@prgn.ru>)
+
+Thu 28 Nov 2002 09:52:30 PM EET
+    + xtfield.cc: fixed XtInputStringField::ClearValue()
+      (patch by Dedov Anton <bada@prgn.ru>)
+    + disable usage of "ncurses hacks" by default
+    + automake and libtool updates
+
+Sat 27 Oct 2001 02:39:54 PM EEST
+    * 1.0.6 released
+
+Mon 08 Oct 2001 07:57:27 PM EEST
+    + documentation updates
+
+Thu 09 Aug 2001 09:23:32 AM EEST
+    + added a search dialog in XtList
+
+Sat 14 Jul 2001 06:32:01 PM EEST
+    + fixed XtList::DeleteItem()
+      (patch by Zeljko Stevanovic <zsteva@kernel.net>)
+    + added XtTab and XtTabDialog
+
+Sat 03 Mar 2001 04:31:55 PM EET
+    + added XtTextEditor
+
+Wed 20 Dec 2000 12:15:48 AM EET
+    * 1.0.5 released
+
+Sat 09 Dec 2000 03:20:06 PM EET
+    + 1.0.5-pre2
+    + xtlist.cc: `GetKeyCode()' added
+    + xtfield.cc: optionally use left/up key to jump to the previous client,
+      right/down key to jump to the next client
+      (patch by Udo Kreckel <udokre@gmx.de>)
+
+Thu 07 Dec 2000 12:10:37 AM EET
+    + xtfield.cc: fixed a possible segfault in XtInputStringField::ClearValue()
+      (suggested by Udo Kreckel <udokre@gmx.de>)
+
+Sun 05 Nov 2000 10:29:24 AM EET
+    + xtlist.cc: fixed a possible segfault
+      (patch by Udo Kreckel <rp14068@online-club.de>)
+
+Sun 22 Oct 2000 03:52:41 PM EEST
+    + xtfield.cc: corrected a potential problem when calling `mktime()'
+      (`tm_isdst' field wasn't set)
+
+Sun 15 Oct 2000 05:23:16 PM EEST
+    + several `char *' to `const char *' conversions
+
+Sat 14 Oct 2000 05:58:48 PM EEST
+    * 1.0.4 released
+
+Wed 11 Oct 2000 11:11:25 PM EEST
+    + 29 people on the mailing list
+
+Wed 20 Sep 2000 07:31:23 PM EEST
+    + 1.0.3-pre1
+    + added `Terminal refresh' (Meta-L) feature
+    + xtscreen.cc: small fixes
+
+Mon 15 May 2000 07:55:07 PM EEST
+    * 1.0.3 released
+    + 25 people on the mailing list
+
+Sun 07 May 2000 11:34:43 AM EEST
+    + xtlist.cc: Draw: crashed on void lists
+    + xtlist.cc: Draw: fix colors when not focused
+
+Wed 03 May 2000 03:16:04 PM EEST
+    + 1.0.3-pre2
+    + added XtInputDateField class (german style only)
+
+Tue 02 May 2000 10:51:29 PM EEST
+    + xtfield.cc: using mouse in hidden fields was causing crashes
+      (reported by Eugene Karpachov <jk@steel.orel.ru>)
+    + possible memory leak in XtComboBox fixed
+
+Wed 05 Apr 2000 10:23:39 PM EEST
+    + XtComboBox adds
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Fri 17 Mar 2000 04:01:55 PM EET
+    + xtcombobox.cc: small XtComboBox fixes
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Sun 05 Mar 2000 04:21:12 PM EET
+    * 1.0.2 released
+    + 23 people on the mailing list
+
+Wed Feb 23 01:07:20 2000
+    + more compile problems with gcc 2.95 fixed
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Fri Feb 18 19:44:20 2000
+    + xtfield.cc: if `FIELD_NO_MARGIN' flag is used, the field have no
+      "margins"
+    + xtmenu.cc: new methods to dynamic add and delete menu entries
+      (patch by Udo Kreckel <rp14068@online-club.de>)
+
+Sat Feb 12 16:21:52 2000
+    + added XtComboBox class
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Tue Feb  1 23:01:56 2000
+    * 1.0.1 released
+
+Tue Feb  1 22:53:47 2000
+    + xtbar.cc: when SB_INDICATE_PERCENT is true, the slider may collide with
+      down (right) arrow
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Wed Jan 26 11:24:19 2000
+    + corrected bit operations with flags
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Thu Jan 20 00:15:16 2000
+    + xtfield.cc: if `FIELD_NO_CLEAR' flag is used, when focus is resumed, old
+      text doesn't clear with new input
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Tue Jan 18 19:36:58 2000
+    + xtapp.cc: XtApplication's destructor won't crash if `Run()' isn't called
+    + xtdesktop.cc: implemented `XtDesktop::GetPattern'
+      (patch by Salvador Eduardo Tropea <salvador@inti.gov.ar>)
+
+Fri Jan 14 00:17:31 2000
+    + fixed a `XtWindow::SetTitle()' compile problem with gcc 2.95
+      (patch by Salvador Eduardo Tropea <salvador@inti.gov.ar>)
+
+Thu Jan 13 17:29:34 2000
+    + xtlist.cc: items now have a `Value' and a `Flags' field and can be made
+      invisible; added `GetCurrentItem()', `GetSelected()', `InsertItem()',
+      `SetFlags()', `SetText()'
+    + xtfield.cc: fixed a bug when `KB_DOWN' was pressed; if `FIELD_AUTO_SKIP'
+      option is used and the field is full, the cursor is positioned into the
+      next field
+      (patch by Udo Kreckel <rp14068@online-club.de>)
+
+Fri Dec 31 13:54:02 1999
+    * jumped to 1.0
+
+Wed Dec 29 23:57:15 1999
+    + xtdialog.cc: added `XtDialogBox::SetFocus()'
+    + xtlist.cc: added `XtList::DeleteItem()'
+      (patch by Udo Kreckel <rp14068@online-club.de>)
+    + xtpassive.cc: small XtStaticText, XtContextualHelp fixes
+
+Tue Dec 28 22:26:19 1999
+    + xtlist.cc: added `XtList::AddFirst()'
+      (patch by Udo Kreckel <rp14068@online-club.de>)
+
+Mon Dec 27 22:10:54 1999
+    + xtfield.cc: corrected some problems when deleting characters in the field
+      with StringLength > FieldLength
+    + xtbar.cc: when `Flags' was set to SB_HORIZONTAL | SB_INDICATE_PERCENT,
+      `XtBar::Draw()' was incorrect when MaxNo < Size.x
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+    + xtlist.cc: added `XtList::AddLast()'
+      (patch by Udo Kreckel <rp14068@online-club.de>)
+
+Mon Dec 26 16:56:29 1999
+    + xtfield.cc: added `XtInputStringField::ClearValue()',
+      `XtInputNumericField::ClearValue()', `FIELD_UPPER_CASE',
+      `FIELD_LOWER_CASE' XtInputStringField options
+      (patch by Udo Kreckel <rp14068@online-club.de>)
+
+Sat Dec 18 17:53:37 1999
+    * 0.6.12 released
+
+Sun Dec 12 15:49:08 1999
+    + xtother.cc: small typo corrected
+      (reported by Udo Kreckel <rp14068@online-club.de>)
+
+Fri Dec 10 23:38:36 1999
+    + xtdialog.cc: added `XtDialogBox::SetTitle()'
+    + xtwindow.cc: added `XtWindow::SetTitle()'
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Wed Dec  8 10:02:16 1999
+    + xtlib.cc: added `#include <unistd.h>'
+      (suggested by John Eikenberry <jae@zhar.net>)
+
+Sun Dec  5 00:05:09 1999
+    + xtlist.cc: XtList::ClearSelected() does really nothing
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Sun Nov 28 00:02:26 1999
+    + xtfield.cc: found a bug when string length is greater than field length
+      and the focus is released; fixed
+    + xtlist.cc: XtList::SetValue() could produce memory leaks
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Tue Nov 23 09:42:59 1999
+    + xtpassive.cc: small bug fixed in XtStaticText. `string::data()' don't
+      return zero-ended strings, replaced with `c_str()'
+      (suggested by Pavel Andreew <pavel@collage.etel.ru>)
+
+Fri Nov  5 00:49:27 1999
+    + update to libtool 1.3.3
+    + removed `const' checking in `configure.in' since it caused compilation
+      errors
+
+Sun Oct 10 12:18:09 1999
+    + fixed a segfault when using the returned IDs or strings of XtHList items
+      (patch by Ric Klaren <ia_ric@cs.utwente.nl>)
+
+Wed Sep 15 22:09:23 1999
+    + 0.6.11 released
+
+Thu Sep  2 10:26:30 1999
+    + xtdialog.cc: small `Switch to previous client' bug fixed
+
+Tue Aug 24 23:48:41 1999
+    + xtfield.cc: removed `InsertMode' as XtInputStringField's member
+    + xtscreen.cc: added `TI_INSERT_MODE' input state
+
+Tue Aug 17 22:20:03 1999
+    + tested on i386-unknown-freebsdelf3.1 (gcc 2.7.2.1, ncurses 5.0)
+      (thanks to Andrej Wladimirowicz <red@skazna.ru>)
+
+Sun Aug  8 16:35:49 1999
+    * 0.6.10 released
+
+Thu Jul  1 18:19:59 1999
+    + added a new configure option: `--disable-ncurses-hacks', which disable
+      that ugly (but efficient) ncurses hacks in xtscreen.cc
+    + added slang support; not finished, though
+
+Tue Jun 29 18:19:58 1999
+    + added hierarchical list class, XtHList
+      (written by Ric Klaren <ia_ric@cs.utwente.nl>)
+    + more XtList bugs fixed
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Thu Jun 24 22:34:09 1999
+    + xtlist.cc: added XtList::SetCurrentItem()
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Wed Jun 23 16:21:43 1999
+    * 0.6.9 released
+
+Tue Jun 22 18:16:31 1999
+    + xtlist.cc: fixed couple of bugs caused by the horizontal scroll bar
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+    + xtlist.cc: XtList::SetValue() was broken; corrected
+    + xtscreen.cc: fixed a long-standing spurious mouse bug (mouse pointer was
+      sloppy)
+
+Wed Jun 16 19:50:53 1999
+    * 0.6.8 released
+
+Sun Jun 13 19:14:52 1999
+    + xtlist.cc: can scroll horizontally too
+
+Sat May 29 22:17:01 1999
+    + xtfield.cc: XtInputNumericField::SetValue() used `.' instead of locale's
+      decimal delimiter; fixed
+    + xbclass.cc: XRect::operator -= was identically with `+=' operator; fixed
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+
+Tue May 18 18:59:33 1999
+    + xtlist.cc: methods to support selecting a given number of elements in
+      XtList
+      (patch by Sjoerd de Heer <s.a.deheer@student.utwente.nl>)
+    + xtfield.cc: if the field type is FIELD_HIDDEN, then entering a new text
+      (after MT_RESUMEFOCUS received) cause wrong cursor position; fixed
+      (patch by Pavel Andreew <pavel@collage.etel.ru>)
+    + xtscreen.cc: using ncurses' mvinch/mvaddch instead playing with it's
+      internal `ldat' structure
+
+Fri May  7 22:55:15 1999
+    * 0.6.7 released
+    + update to automake 1.4, libtool 1.3
+
+Sun Apr 25 17:39:36 1999
+    + xtother.cc: added a search dialog in XtTextViewer
+
+Sun Apr  4 15:49:29 1999
+    + xtlib.cc: changed from signal() to sigaction() to keep POSIX conformance
+
+Sat Apr  3 19:49:30 1999
+    + xtother.cc: added horizontal scroll bar in XtTextViewer
+
+Wed Mar 24 22:21:10 1999
+    + small XtTextViewer bug corrected
+      (reported by Udo Kreckel <rp14068@online-club.de>)
+    + XtScrollBar bug finally fixed
+
+Mon Mar 22 10:54:31 1999
+    + update to libtool 1.2b
+    + `configure --enable-debug' didn't work; fixed
+      (reported by Udo Kreckel <rp14068@online-club.de>)
+
+Wed Mar 10 22:03:53 1999
+    + xtbar.cc: spurious bug fixed
+
+Tue Mar  9 19:09:11 1999
+    + 0.6.6 released
+    + documentation updates
+    + added `Switch to next client' (Meta-Tab) feature in XtApplication
+      (not yet finished though)
+
+Thu Mar  4 10:00:23 1999
+    + now it's possible to tell XtScrollBar to indicate the percent of total
+      items are being viewed or the current item number
+
+Wed Mar  3 22:37:45 1999
+    + added `Switch to previous client' (Meta-P) feature in XtDialogBox
+    + XtDialog fixes
+    + xtscreen.cc: mouse handling fixes
+    + example/exevent.cc didn't call XRefresh() after XPrint(); fixed
+
+Mon Mar  1 19:30:41 1999
+    + xtscreen.cc: GPM don't block us any more
+    + XtDialog: fixed a embarrassing bug (client's Draw() was delayed)
+    + web page moved to http://www.linuxsupportline.com/~Xterminal
+
+Tue Feb 23 19:13:57 1999
+    + xtbar.cc small fixes
+
+Tue Feb 23 13:48:38 1999
+    + made XtDialogBox to correctly restore clients' focus after a focus
+      release (for example, when moving the window)
+    + fixed a bunch of bugs I introduced in the hurry to release 0.6.5
+      (XtWindow, XtDialogBox, XtMenu, etc.)
+
+Wed Feb 17 17:55:39 1999
+    * 0.6.5 release
+    + XtMenu::ProcessMouseEvent() fixed (outside events were eaten by XtMenu)
+      (thanks to Uwe Steinmann <steinm@gehtnix.fernuni-hagen.de>)
+    + nasty bug fixed in mouse handling (example/exevent.cc didn't work)
+    + documentation update
+
+Tue Feb 16 23:02:08 1999
+    + XtApplication::RunClient() fixes (the registered client had wrong
+      coordinates)
+    + XtDialogBox::CalculateBounds() added
+    + XtDialogBox::MoveTo() fixed (associated window had wrong coordinates)
+      (reported by Uwe Steinmann <steinm@gehtnix.fernuni-hagen.de>)
+
+Sat Feb 13 17:07:14 1999
+    + XtButton: if the mouse was released outside button's bounds, just drop
+      the "press" state
+    + small XtInputStringField::Draw() bug fixed
+    + small XButton::Draw() bug fixed
+    + added contextual help in XtMenu
+    + XRect::IsValid() added
+    + XTerminal::GetName() added
+    + added coordinates checking in XTerminal methods
+    + XtMenu::ProcessMouseEvent() bug fixed: when clicking on the upper
+      horizontal line of a pull-down menu, application crashed
+      (reported by Uwe Steinmann <steinm@gehtnix.fernuni-hagen.de>)
+
+Wed Feb 10 10:29:05 1999
+    + XtContextualHelp class added
+    + XtStaticText::SetValue() bug fixed
+
+Sun Feb  7 19:49:36 1999
+    + using GNU automake and libtool to automagically create the Makefiles
+    + new web page home: xterminal.linuxbox.com
+
+Mon Feb  1 17:13:32 1999
+    + added `-funsigned-char' option to CXXFLAGS so > 128 chars are displayed
+      correctly
+
+Sat Jan 30 22:34:16 1999
+    + couple of more bugs corrected in XtInputStringField
+    + corrected a example/exwin.cc typo
+      (thanks to Udo Kreckel <rp14068@online-club.de>)
+
+Sun Jan 24 17:41:30 1999
+    * 0.6.4 released
+    + documentation update
+    + more Makefiles enhancements
+
+Tue Jan 19 00:07:35 1999
+    + Makefiles changes so the header files are installed into a separate
+      directory
+
+Mon Jan 18 22:46:26 1999
+    + added multi-line and right-justified input fields
+    + couple of XtInputStringField, XtInputNumericField bugs removed
+      (patch by Udo Kreckel <rp14068@online-club.de>)
+    + start working on internationalization support
+    + added detection of host type in configure script
+
+Sat Jan  2 15:55:41 1999
+    + small XtInputStringField.Draw() problem corrected
+      (patch by Udo Kreckel <rp14068@online-club.de>)
+
+Tue Dec 29 22:52:25 1998
+    * 0.6.3
+
+Mon Dec 28 22:34:59 1998
+    + mouse movement handling fixed
+    + small XtMenu.ProcessMouseEvent() bug fixed
+    + XtDialogBox cleanups
+
+Sat Nov 28 19:42:51 1998
+    + couple of monochrome palettes corrections
+
+Mon Nov 23 11:12:28 1998
+    + src/Makefile, example/Makefile fixes
+      (suggested by Alex Buell <alex.buell@tahallah.demon.co.uk>)
+
+Sun Nov 15 15:46:07 1998
+    * 0.6.2 released
+
+Sat Nov 14 23:25:24 1998
+    + documentation updates
+    + couple of configure script improvements
+    + XtBar bug fixed (crashes caused by a division by zero)
+    + small XtTextViewer fix
+
+Thu Nov 12 22:37:11 1998
+    + small XtInputNumericField bug fixed (float was used instead of double)
+
+Thu Nov 12 00:03:49 1998
+    + XtRadioButton.GetItemValue() renamed to GetValue()
+    + XtCheckButton.GetItemValue() renamed to GetValue()
+    + added XtList.SetValue()
+    + XtList.GetItemValue() renamed to GetValue()
+    + added 'Quick lookup' in XtList
+    + small XtInputStringField.Draw() bug fixed
+
+Thu Nov  5 23:29:20 1998
+    * Xterminal 0.6.1 released
+    + small XtList bug fixed
+
+Sun Nov  1 22:34:33 1998
+    + added XtWindow.Resize()
+    + corrected a XtWindow.MoveTo() bug
+    + added XObject.Resize()
+
+Sat Oct 31 22:27:54 1998
+    * Xterminal 0.6 released
+
+Fri Oct 23 22:26:20 1998
+    + created a mailing list
+    + XtRadioButton fix
+      (patch by Philippe Martin <pmartin@eridan-info.fr>)
+
+Sat Oct 17 15:24:10 1998
+    + XObject.UnregisterClient() fixed
+    + XtTextViewer fixes
+
+Mon Sep 28 18:24:57 1998
+    + added 'Select all' (Meta-A) and 'Reverse selection' (Meta-R) in XtList
+    + XtInputNumericField fixes
+    + fixed (again) the ESCDELAY support
+
+Wed Sep  9 23:20:56 1998
+    * Xterminal 0.5 released
+    + header files clean-up
+    + fixed library access rights
+      (reported by Vandenbrouck Gregory <vdb@pipo.com>)
+    + XtInputNumericField improvements
+
+Sat Sep  5 14:32:23 1998
+    * Xterminal 0.4 released
+    + XtList, XtCheckButton, XtRadioButton fixes
+
+Wed Sep  2 22:56:12 1998
+    + XtInputStringField, XtInputNumericField fixes
+    + XtWindow fixes
+    + Makefiles fixes (they did work only with GNU make)
+    + implemented NewList (xtlist.cc)
+
+Tue Sep  1 20:48:31 1998
+    + added XtMessageBox class
+
+Sun Aug 16 23:55:12 1998
+    + added SIGWINCH handling
+    + added XTerminal.Resize()
+    + Makefiles fixes
+    + XtStaticText improvements
+    + removed the TM_IS_CONSOLE flag since was useless
+    + added XTerminal.IsValid()
+    + successfully tested on sparc-sun-solaris2.6 (gcc 2.8.0, ncurses 4.2)
+      (thanks to Thanh Q. Ma <thanh.ma@east.sun.com>)
+
+Tue Aug  4 19:58:31 1998
+    * Time to release 0.3
+    + resolved the XtWindow bug when moving windows using the mouse
+      (reported by Joseph Martin <martinja@exis.net>)
+
+Mon Aug  3 15:36:08 1998
+    + XObject, XtApplication, XtTextViewer, XtInputNumericField fixes
+    + XObject::SetState(int, int) changed to SetState(unsigned long, bool)
+    + resolved again the KB_ENTER problem
+
+Sun Aug  2 17:10:33 1998
+    + added XObject.UnregisterClient()
+    + added XtApplication.RunClient()
+    + changed return type of ProcessEvent() methods from int to bool
+    + documentation updates
+
+Sat Aug  1 15:12:07 1998
+    + changed XtWindow to behave as an "active" object
+      (reported by Joseph Martin <martinja@exis.net>)
+
+Wed Jul 29 12:11:58 1998
+    * Time for Xterminal 0.2
+
+Mon Jul 27 23:48:09 1998
+    + resolved the KB_ENTER problem: the RETURN key stop responding when
+      using GPM mouse (reported by Ovidiu Ene <ovidiue@mail.dntis.ro>)
+    + mouse-related fixes for xtlist.cc
+
+Tue Jul 21 01:51:11 1998
+    + make use of ncurses' mouse support when running on xterm
+      (suggested by Bernd Kalbfuss <slice@t-online.de>)
+
+Thu Jul 16 17:59:45 1998
+    + some esthetic fixes for exwin.cc
+
+Tue Jul 14 01:49:23 1998
+    + moved from String to string and from SLList to list because those are
+      part of libg++ which is obsolete
+      (reported by Bob Bernstein <bernie@brainiac.com>)
+    + removed the XtMenu bug when using menu separator lines
+
+Mon Jun 29 21:54:42 1998
+    + resolved the "ESCDELAY" problem when using ncurses versions older than
+      1.9.9e (reported by Jim Hickle <jhickle@pgh.nauticom.net>)
+
+Mon Jun 22 16:34:02 1998
+    * Xterminal 0.1 is ready to ship
+
+Fri Jun 19 19:18:58 1998
+    * Released Xterminal 0.0.55-beta
+    + History -> ChangeLog
+    + various XtInputStringField, XtDialog, XtDialogBox, XtMenu fixes
+    + minor documentation updates
+
+Tue Jun 16 23:10:37 1998
+    + removed all places where find() was used with multimaps, since it
+      seems does not work properly on gcc versions older than 2.7.2.3
+
+Mon Jun 15 23:02:14 1998
+    * Released Xterminal 0.0.54-beta
+    + various fixes
+
+Sat Jun 13 20:25:13 1998
+    + made process stopping/continuing ("Ctrl+Z"/"fg") reliable
+
+Wed Jun 10 22:48:52 1998
+    * Released Xterminal 0.0.52-beta
+    + minor documentation changes
+    + a couple of XtDialog and XtDialogBox bugs removed
+
+Tue Jun  9 23:57:06 1998
+    + XtDialogBox dragging code cleaned
+    + added an optional "shadow" effect to XtWindow
+
+Mon Jun  8 15:10:39 1998
+    + XtBackground, XtDesktop, XtDialog, XtDialogBox, XtList, XtMenu,
+      XtStatusLine, XtTextViewer documentation done
+
+Sat Jun  6 22:57:17 1998
+    + completely rewrite of XtMenu and XtStatusLine
+
+Wed Jun  3 15:22:15 1998
+    + config.h changed to xconfig.h, tscreen.h changed to xtscreen.h
+
+Fri May 29 19:51:20 1998
+    * Released Xterminal 0.0.48-beta
+
+Thu May 28 01:02:53 1998
+    + XtApplication, XtButton, XtCheckButton, XtRadioButton documentation done
+    + monochrome palettes support added
+    + more code sanity checks with gcc -Wall
+
+Thu May 21 22:45:06 1998
+    + web page changes
+    + XtScrollBar, XtProgressBar, XtInputStringField, XtInputNumericField,
+      XtWindow, XtStaticText, XInit, XDone, XDebug documentation done
+
+Sun May 17 23:45:02 1998
+    + created the CREDITS file
+
+Wed May 13 03:19:44 1998
+    + changed events queue from own-implemented queue to deque (STL)
+
+Tue May 12 02:24:39 1998
+    + changed objects table from own-implemented linked list to multimap (STL)
+
+May 09, 1998 - changed clients list in XObject from own-implemented linked list
+               to SLList (STL)
+May 08, 1998 - the implementation of the new event model is done (thanks a lot
+               Bernd)
+	     - Xterminal's birthday - 2 years...
+May 06, 1998 Released Xterminal 0.0.38-beta
+Apr 29, 1998 - finished the XTerminal class which abstractize the input/output
+               operations with the terminal
+Apr 27, 1998 - XtTextViewer is done
+Apr 23, 1998 Released Xterminal 0.0.36-beta
+Apr 12, 1998 - corrected a bug in XtMenu
+               (the line separator between items was broken sometimes)
+Apr 06, 1998 - XtInputNumericField is done
+Mar 09, 1998 - XtList (including mouse support) is done
+Jan 04, 1998 - documentation for XPoint and XRect is done (thanks a lot Bernd)
+               (and more documentation will come...)
+Sep 30, 1997 Released Xterminal 0.0.30
+Sep 25, 1997 - a small documentation (in HTML format) is now provided
+Sep 02, 1997 - now using an autoconf script to configure the package
+Aug 30, 1997 - signals are translated into events now
+             - mouse events treatment for XtDialogBox
+	     - XtDialogBox is done
+Aug 27, 1997 - mouse support implemented (only for Linux console, using "gpm")
+             - a *lot* of esthetic changes inside sources
+Jun 08, 1997 - it took about 4 hours to change the whole Xterminal to fit the
+               new notation conventions
+Apr 08, 1997 Released Xterminal 0.0.21
+Apr 05, 1997 - XtMenu is done (removed some bugs)
+Mar 31, 1997 Released Xterminal 0.0.20
+             - XtApplication class added
+             - Xterminal allow now creation of full-featured applications
+Mar 27, 1997 - XtMenu, XtStatusLine (thanks Adrian) classes added
+Mar 15, 1997 - the new color management is done
+Feb 20, 1997 - XtDesktop is ready
+Oct 30, 1996 I had a speech about Xterminal at ROSE'96. The conference text was
+             published in Proceedings (Technical Sessions) Book
+Sep 23, 1996 Released Xterminal 0.0.18
+Aug 05, 1996 - XtDialog and the general part of XtDialogBox are almost done
+             - some changes made to XtButton and XtInputStringField, so to work
+               with XtDialogBox too
+Jul 28, 1996 - completely rewrite of Makefiles
+Jul 12, 1996 Released Xterminal 0.010
+             - a lot of minor changes
+             - 'History' file added
+             - slightly notation changes
+Jul 04, 1996 - XtButton (thanks Adrian) class added
+Jul 02, 1996 - XtCheckButton, XtRadioButton classes added
+             - creation of this file
+May 20, 1996 Released Xterminal 0.003
+             - changed the name of the library :(
+             - XtScrollBar, XtProgressBar (thanks Adrian),
+               XtInputStringField classes added
+May 08, 1996 Released Xt 0.001 (old name :-))
+
+Mar 08, 1996 Yesterday I made, together with Adi Teohar, *revolutionary*
+             changes :-) to the base of Xterminal. bobject.h vanished; now
+             we have bclass.h, xobject.h and xobject.c. The generally part
+             of the library is now ready. It works under Linux, too.
+Feb 28, 1996 After a long :-( period of time, I started again: added a void
+             *ptr field to the XMessage structure, so we can send pointers
+             between objects, and some corrections with inserts in lists.
+Dec 14, 1995 I made major changes to XPoint and XRect (bobject.h); added
+             some basically operators.
+Nov 10, 1995 I have just implemented the event queue.
+Nov 03, 1995 I met Linus Torvalds at ROSE'95. I told him about that stupid
+             thing with attributes and the thing is that Linux's curses is
+             BSD 4 compatible, and he cannot change colors; forget about
+             curses, new Slackwares uses ncurses, which is System V
+             compatible, and can change colors. The best idea is to use
+             ncurses (not only on Linux, but in other Unixes too) so to be a
+             higher compatibility.
+Oct 09, 1995 Some methods added in XObject: registerclient() to register the
+             new client, calculatebounds() to adjust the new client's bounds
+             to the server's bounds. I should do two important things: first,
+             to use a message queue instead of older communication, and
+             second, to use a public palette table instead of using a
+             palette structure for every class.
+Sep 28, 1995 Created event handler.
+Aug 10, 1995 Created abstract.h, containing definitions for some abstract
+             objects (Point, Rect).
+Jul 23, 1995 Here starts my log: types.h created.

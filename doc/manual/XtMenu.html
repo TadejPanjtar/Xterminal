@@ -1,0 +1,303 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XtMenu</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.2">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">XtMenu</A>: public <!1><A HREF="XObject.html#DOC.14.14">XObject</A></H2>
+<BLOCKQUOTE>Pull-down menu</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<H3>XtMenu
+- <A HREF="XObject.html">XObject</A>
+- <A HREF="XEventBroker.html">XEventBroker</A>
+</H3>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.35.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XtMenu</B>(<!1><A HREF="XRect.html">XRect</A> __r, unsigned long __Flags, MenuItem *__Items = 0)
+<DD><I>Constructs a new XtMenu.</I>
+<DT>
+<A HREF="#DOC.35.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>~XtMenu</B>()
+<DD><I>Destructs the object's instance</I>
+<DT>
+<A HREF="#DOC.35.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Draw</B>()
+<DD><I>Draws the object</I>
+<DT>
+<A HREF="#DOC.35.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="XtContextualHelp.html">XtContextualHelp</A>* <B>GetHelp</B>()
+<DD><I>Returns the current contextual help</I>
+<DT>
+<A HREF="#DOC.35.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   MenuItem* <B>GetValue</B>()
+<DD><I>Returns the menu content</I>
+<DT>
+<A HREF="#DOC.35.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   long <B>AddMenuItem</B>(const char *__Text, const char *__KeyText, int __Key, int __Command)
+<DD><I>add new menu item</I>
+<DT>
+<A HREF="#DOC.35.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   long <B>AddMenuSubItem</B>(const char *__Text, const char *__KeyText, int __Key, int __Command, long __Id)
+<DD><I>add new sub menu item to given menu item</I>
+<DT>
+<A HREF="#DOC.35.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   long <B>AddNewLine</B>(long __Id)
+<DD><I>add line separator to menu item</I>
+<DT>
+<A HREF="#DOC.35.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>DeleteAllItem</B>(MenuItem *__Menu)
+<DD><I>Deletes all menu items</I>
+<DT>
+<A HREF="#DOC.35.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>DeleteMenuItem</B>(long __Id)
+<DD><I>Deletes menu item upon given id and all subitems, if available</I>
+<DT>
+<A HREF="#DOC.35.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DD><I>Process incoming events by calling XObjectEventListener's ProcessEvent()</I>
+<DT>
+<A HREF="#DOC.35.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessCommand</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DD><I>Process commands</I>
+<DT>
+<A HREF="#DOC.35.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessKeyboardEvent</B>(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)
+<DD><I>Process keyboard events</I>
+<DT>
+<A HREF="#DOC.35.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessMessage</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DD><I>Process messages</I>
+<DT>
+<A HREF="#DOC.35.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessMouseEvent</B>(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)
+<DD><I>Process mouse events</I>
+<DT>
+<A HREF="#DOC.35.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetHelp</B>(<!1><A HREF="XRect.html">XRect</A> __r, unsigned __Alignment, unsigned long __Flags)
+<DD><I>Setup a contextual help for menu items</I>
+<DT>
+<A HREF="#DOC.35.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetValue</B>(MenuItem *__Items)
+<DD><I>Change the menu content</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObject.html">XObject</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>CalculateBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>GetBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   <!1><A HREF="XEvent.html">XEvent</A>* <B>GetEvent</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetId</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char* <B>GetObjClass</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetOrigin</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   char* <B>GetPalette</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   unsigned <B>GetPalEntry</B>(unsigned __Index)
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetSize</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetState</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>GetState</B>(unsigned long __Mask)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>HandleEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>MoveTo</B>(<!1><A HREF="XPoint.html">XPoint</A> __p)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>RegisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>Resize</B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetPalette</B>(char *__Pal, unsigned __PalLen)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetState</B>(unsigned long __Mask, bool __BoolValue)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>UnregisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>Id</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>State</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Origin</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Size</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Cursor</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>Bounds</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>ObjClass</B>[40]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>Pal</B>[80]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned <B>PalLen</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XObject.html#DOC.14.14">XObject</A>* <B>Server</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>ClientList <B>Clients</B>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, long __Message)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventBroker.html">XEventBroker</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>AddListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>Map <B>__map</B>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObjectEventListener.html">XObjectEventListener</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessSignal</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessBroadcast</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventListener.html">XEventListener</A>:</H3>
+<DL>
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Pull-down menu</BLOCKQUOTE>
+<DL>
+
+<A NAME="XtMenu">
+<A NAME="DOC.35.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XtMenu(<!1><A HREF="XRect.html">XRect</A> __r, unsigned long __Flags, MenuItem *__Items = 0)</B></TT>
+<DD>Constructs a new XtMenu.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  menu bounds
+<BR><B>__Flags</B> -  options, which can be:
+<p><b>VERTICAL_MENU</b> - to position the menu vertically
+<p><b>HIDE_DISABLED_ITEMS</b> - to hide the disabled items
+<BR><B>__Items</B> -  linked list of menu items:
+<p>struct MenuItem {<br>
+char *Text;<br>
+char *KeyText;<br>
+int Key, Command;<br>
+unsigned Value;<br>
+XtWindow *ChildWindow;<br>
+MenuItem *Child, *Parent;<br>
+MenuItem *Next;<br>
+};<br>
+<p>This list can be constructed using the following 2 functions:
+<p>MenuItem *NewMenuItem(char *__Text, char *__KeyText, int __Key, int __Command, MenuItem *__Child, MenuItem *__ANextItem)
+which builds the entire list, and:
+<p>MenuItem *NewLine(MenuItem *__ANextItem) which builds a line separator<BR><DD></DL><P>
+<A NAME="~XtMenu">
+<A NAME="DOC.35.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~XtMenu()</B></TT>
+<DD>Destructs the object's instance
+<DL><DT><DD></DL><P>
+<A NAME="Draw">
+<A NAME="DOC.35.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Draw()</B></TT>
+<DD>Draws the object
+<DL><DT><DD></DL><P>
+<A NAME="GetHelp">
+<A NAME="DOC.35.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="XtContextualHelp.html">XtContextualHelp</A>* GetHelp()</B></TT>
+<DD>Returns the current contextual help
+<DL><DT><DD></DL><P>
+<A NAME="GetValue">
+<A NAME="DOC.35.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   MenuItem* GetValue()</B></TT>
+<DD>Returns the menu content
+<DL><DT><DD></DL><P>
+<A NAME="AddMenuItem">
+<A NAME="DOC.35.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   long AddMenuItem(const char *__Text, const char *__KeyText, int __Key, int __Command)</B></TT>
+<DD>add new menu item
+<DL><DT><DD></DL><P>
+<A NAME="AddMenuSubItem">
+<A NAME="DOC.35.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   long AddMenuSubItem(const char *__Text, const char *__KeyText, int __Key, int __Command, long __Id)</B></TT>
+<DD>add new sub menu item to given menu item
+<DL><DT><DD></DL><P>
+<A NAME="AddNewLine">
+<A NAME="DOC.35.8">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   long AddNewLine(long __Id)</B></TT>
+<DD>add line separator to menu item
+<DL><DT><DD></DL><P>
+<A NAME="DeleteAllItem">
+<A NAME="DOC.35.9">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void DeleteAllItem(MenuItem *__Menu)</B></TT>
+<DD>Deletes all menu items
+<DL><DT><DD></DL><P>
+<A NAME="DeleteMenuItem">
+<A NAME="DOC.35.10">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void DeleteMenuItem(long __Id)</B></TT>
+<DD>Deletes menu item upon given id and all subitems, if available
+<DL><DT><DD></DL><P>
+<A NAME="ProcessEvent">
+<A NAME="DOC.35.11">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessEvent(<!1><A HREF="XEvent.html">XEvent</A> *__Event)</B></TT>
+<DD>Process incoming events by calling XObjectEventListener's ProcessEvent()
+<DL><DT><DD></DL><P>
+<A NAME="ProcessCommand">
+<A NAME="DOC.35.12">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessCommand(<!1><A HREF="XMessage.html">XMessage</A> *__Event)</B></TT>
+<DD>Process commands
+<DL><DT><DD></DL><P>
+<A NAME="ProcessKeyboardEvent">
+<A NAME="DOC.35.13">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessKeyboardEvent(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)</B></TT>
+<DD>Process keyboard events
+<DL><DT><DD></DL><P>
+<A NAME="ProcessMessage">
+<A NAME="DOC.35.14">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessMessage(<!1><A HREF="XMessage.html">XMessage</A> *__Event)</B></TT>
+<DD>Process messages
+<DL><DT><DD></DL><P>
+<A NAME="ProcessMouseEvent">
+<A NAME="DOC.35.15">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessMouseEvent(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)</B></TT>
+<DD>Process mouse events
+<DL><DT><DD></DL><P>
+<A NAME="SetHelp">
+<A NAME="DOC.35.16">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetHelp(<!1><A HREF="XRect.html">XRect</A> __r, unsigned __Alignment, unsigned long __Flags)</B></TT>
+<DD>Setup a contextual help for menu items
+<DL><DT><DD></DL><P>
+<A NAME="SetValue">
+<A NAME="DOC.35.17">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetValue(MenuItem *__Items)</B></TT>
+<DD>Change the menu content
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998-2001 <a href="mailto:dragos@iname.com">Dragos Acostachioaie</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

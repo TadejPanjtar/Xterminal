@@ -1,0 +1,286 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XtWindow</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.3.17-pre4">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>class  <A HREF="#DOC.DOCU">XtWindow</A>: public <!1><A HREF="XObject.html#DOC.14.14">XObject</A></H2>
+<BLOCKQUOTE>Window class</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<H3>XtWindow
+- <A HREF="XObject.html">XObject</A>
+- <A HREF="XEventBroker.html">XEventBroker</A>
+</H3>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.43.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>class  <!1><A HREF="XtDialogBox.html">XtDialogBox</A> <B>XtWindow</B>(<!1><A HREF="XRect.html">XRect</A> __r, char *__Title)
+<DD><I>Constructs a new XtWindow with the specified bounds and title</I>
+<DT>
+<A HREF="#DOC.43.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <B>~XtWindow</B>()
+<DD><I>Destructs the XtWindow instance</I>
+<DT>
+<A HREF="#DOC.43.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Close</B>()
+<DD><I>Close the window</I>
+<DT>
+<A HREF="#DOC.43.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Draw</B>()
+<DD><I>Draws the window</I>
+<DT>
+<A HREF="#DOC.43.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>MoveTo</B>(<!1><A HREF="XPoint.html">XPoint</A> __p)
+<DD><I>Move the upper-left window corner to the specified coordinate</I>
+<DT>
+<A HREF="#DOC.43.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessKeyboardEvent</B>(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)
+<DD><I>Process keyboard events</I>
+<DT>
+<A HREF="#DOC.43.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessMessage</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DD><I>Process message events.</I>
+<DT>
+<A HREF="#DOC.43.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessMouseEvent</B>(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)
+<DD><I>Process mouse events</I>
+<DT>
+<A HREF="#DOC.43.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Resize</B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DD><I>Adjusts the object's size with the specified coordinates </I>
+<DT>
+<A HREF="#DOC.43.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetFrame</B>(char *__Frame)
+<DD><I>Set the frame style</I>
+<DT>
+<A HREF="#DOC.43.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetTitle</B>(char *__Title)
+<DD><I>Set the window title</I>
+<DT>
+<A HREF="#DOC.43.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetState</B>(unsigned long __Mask, bool __BoolValue)
+<DD><I>Sets the window state</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<A HREF="#DOC.43.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>chtype* <B>Buffer</B>
+<DD><I>Buffer to save the old screen area</I>
+<DT>
+<A HREF="#DOC.43.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>char* <B>Title</B>
+<DD><I>Window title</I>
+<DT>
+<A HREF="#DOC.43.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>char <B>Frame</B>[10]
+<DD><I>Window frame</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<A HREF="#DOC.43.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void <B>FrameUpdate</B>()
+<DD><I>Updates window margins</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObject.html">XObject</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>CalculateBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>GetBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   <!1><A HREF="XEvent.html">XEvent</A>* <B>GetEvent</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetId</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char* <B>GetObjClass</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetOrigin</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   char* <B>GetPalette</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   unsigned <B>GetPalEntry</B>(unsigned __Index)
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetSize</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetState</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>GetState</B>(unsigned long __Mask)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>HandleEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>RegisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetPalette</B>(char *__Pal, unsigned __PalLen)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>UnregisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>Id</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>State</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Origin</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Size</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Cursor</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>Bounds</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>ObjClass</B>[40]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>Pal</B>[80]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned <B>PalLen</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XObject.html#DOC.14.14">XObject</A>* <B>Server</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>ClientList <B>Clients</B>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, long __Message)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventBroker.html">XEventBroker</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>AddListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>Map <B>__map</B>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObjectEventListener.html">XObjectEventListener</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessCommand</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessSignal</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessBroadcast</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventListener.html">XEventListener</A>:</H3>
+<DL>
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Window class</BLOCKQUOTE>
+<DL>
+
+<A NAME="XtWindow">
+<A NAME="DOC.43.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>class  <!1><A HREF="XtDialogBox.html">XtDialogBox</A> XtWindow(<!1><A HREF="XRect.html">XRect</A> __r, char *__Title)</B></TT>
+<DD>Constructs a new XtWindow with the specified bounds and title
+<DL><DT><DD></DL><P>
+<A NAME="~XtWindow">
+<A NAME="DOC.43.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~XtWindow()</B></TT>
+<DD>Destructs the XtWindow instance
+<DL><DT><DD></DL><P>
+<A NAME="Close">
+<A NAME="DOC.43.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Close()</B></TT>
+<DD>Close the window
+<DL><DT><DD></DL><P>
+<A NAME="Draw">
+<A NAME="DOC.43.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Draw()</B></TT>
+<DD>Draws the window
+<DL><DT><DD></DL><P>
+<A NAME="MoveTo">
+<A NAME="DOC.43.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void MoveTo(<!1><A HREF="XPoint.html">XPoint</A> __p)</B></TT>
+<DD>Move the upper-left window corner to the specified coordinate
+<DL><DT><DD></DL><P>
+<A NAME="ProcessKeyboardEvent">
+<A NAME="DOC.43.8">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessKeyboardEvent(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)</B></TT>
+<DD>Process keyboard events
+<DL><DT><DD></DL><P>
+<A NAME="ProcessMessage">
+<A NAME="DOC.43.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessMessage(<!1><A HREF="XMessage.html">XMessage</A> *__Event)</B></TT>
+<DD>Process message events. __Event->Message can be:
+<p><b>WM_CLOSE</b> - request to close the window
+<p><b>WM_OPEN</b> - request to open the window (e.g. to draw it)
+<p><b>WM_MOVE</b> - request to move the window
+<DL><DT><DD></DL><P>
+<A NAME="ProcessMouseEvent">
+<A NAME="DOC.43.9">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessMouseEvent(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)</B></TT>
+<DD>Process mouse events
+<DL><DT><DD></DL><P>
+<A NAME="Resize">
+<A NAME="DOC.43.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Resize(<!1><A HREF="XPoint.html">XPoint</A> __delta)</B></TT>
+<DD>Adjusts the object's size with the specified coordinates
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__delta</B> -  translation vector<BR><DD></DL><P>
+<A NAME="SetFrame">
+<A NAME="DOC.43.10">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetFrame(char *__Frame)</B></TT>
+<DD>Set the frame style
+<DL><DT><DD></DL><P>
+<A NAME="SetTitle">
+<A NAME="DOC.43.11">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetTitle(char *__Title)</B></TT>
+<DD>Set the window title
+<DL><DT><DD></DL><P>
+<A NAME="SetState">
+<A NAME="DOC.43.12">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetState(unsigned long __Mask, bool __BoolValue)</B></TT>
+<DD>Sets the window state
+<DL><DT><DD></DL><P>
+<A NAME="Buffer">
+<A NAME="DOC.43.13">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>chtype* Buffer</B></TT>
+<DD>Buffer to save the old screen area
+<DL><DT><DD></DL><P>
+<A NAME="Title">
+<A NAME="DOC.43.14">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* Title</B></TT>
+<DD>Window title
+<DL><DT><DD></DL><P>
+<A NAME="Frame">
+<A NAME="DOC.43.15">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char Frame[10]</B></TT>
+<DD>Window frame
+<DL><DT><DD></DL><P>
+<A NAME="FrameUpdate">
+<A NAME="DOC.43.16">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void FrameUpdate()</B></TT>
+<DD>Updates window margins
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="XtTextViewer.html">XtTextViewer</A><BR>
+</DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998-2001 <a href="mailto:dragos@iname.com">Dragos Acostachioaie</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

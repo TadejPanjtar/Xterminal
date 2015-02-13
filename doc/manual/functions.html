@@ -1,0 +1,77 @@
+<html>
+
+<head><title>Xterminal Programmer's Manual - Functions and macros</title></head>
+<body bgcolor="#ffffff" text="#000000" link="#000080" alink="#c00000" vlink="#404040">
+
+<table width="100%" cellspacing=0 border=0 cellpadding=4>
+<tr valign=top bgcolor="#80c080">
+<td>
+<a href="http://xterminal.sourceforge.net">Xterminal Home Page</a>
+<td align=right>
+<a href="index.html">Main page</a>
+</table>
+
+<h2>Functions and macros</h2>
+<br>
+
+<a name="ClearEvent"><H2>void ClearEvent(<!1><A HREF="XEvent.html">XEvent</A> *__Event)</H2></a>
+<BLOCKQUOTE>
+Clears the event passed as parameter
+</BLOCKQUOTE><br>
+<a name="FetchEvent.1"><h2><a href="XEvent.html">XEvent</a>* FetchEvent(unsigned long __Id)</h2></a>
+<blockquote>
+Returns the first available event for object __Id, zero if none
+</blockquote><br>
+<a name="FetchEvent.2"><h2><a href="XEvent.html">XEvent</a>* FetchEvent()</h2></a>
+<blockquote>
+Returns the first available event, zero if none
+</blockquote>
+<br>
+
+<a name="XInit"><h2>void XInit()</h2>
+<blockquote>
+Initialize the Xterminal library
+</blockquote>
+<a name="XDone"><h2>void XDone()</h2>
+<BLOCKQUOTE>
+End the Xterminal session
+</BLOCKQUOTE>
+<a name="XDebug"><h2>void XDebug(char *__fmt, ...)</h2>
+<BLOCKQUOTE>
+Produce debug information to Xterminal's log file
+</BLOCKQUOTE>
+<br>
+
+<h2>Terminal-related functions</h2>
+void XBeep() -> <a href="XTerminal.html#Beep">Terminal->Beep</a>()<br>
+void XClear() -> <a href="XTerminal.html#Clear">Terminal->Clear</a>()<br>
+void XColorWindow(XRect __r, unsigned __f, unsigned __b) -> <a href="XTerminal.html#ColorWindow">Terminal->ColorWindow</a>(XRect __r, unsigned __f, unsigned __b)<br>
+void XColorWindowContent(XRect __r, unsigned __f, unsigned __b) -> <a href="XTerminal.html#ColorWindow">Terminal->ColorWindowContent</a>(XRect __r, unsigned __f, unsigned __b)<br>
+void XDrawBorder(XRect __r, char *__frame) -> <a href="XTerminal.html#DrawBorder">Terminal->DrawBorder</a>(XRect __r, char *__frame)<br>
+void XFillWindow(XRect __r, chtype __c) -> <a href="XTerminal.html#FillWindow">Terminal->FillWindow</a>(XRect __r, chtype __c)<br>
+void XGetColor(unsigned *__f, unsigned *__b) -> <a href="XTerminal.html#GetColor">Terminal->GetColor</a>(unsigned *__f, unsigned *__b)<br>
+XEvent* XGetEvent() -> <a href="XTerminal.html#GetEvent">Terminal->GetEvent</a>()<br>
+void XGetInputState(unsigned __Mask) -> <a href="XTerminal.html#GetInputState">Terminal->GetInputState</a>(unsigned __Mask)<br>
+void XGetOutputState(unsigned __Mask) -> <a href="XTerminal.html#GetOutputState">Terminal->GetOutputState</a>(unsigned __Mask)<br>
+XPoint XGetSize() -> <a href="XTerminal.html#GetSize">Terminal->GetSize</a>()<br>
+unsigned XGetState(unsigned __Mask) -> <a href="XTerminal.html#GetState">Terminal->GetState</a>(unsigned __Mask)<br>
+void XGetWindow(XRect __r, chtype *__buff) -> <a href="XTerminal.html#GetWindow">Terminal->GetWindow</a>(XRect __r, chtype *__buff)<br>
+bool XIsValid(XPoint __p) -> <a href="XTerminal.html#IsValid">Terminal->IsValid(XPoint __p)</a><br>
+void XMoveCursor(XPoint __p) -> <a href="XTerminal.html#MoveCursor">Terminal->MoveCursor</a>(XPoint __p)<br>
+void XPrint(XPoint __p, char *__fmt, ...) -> <a href="XTerminal.html#Print">Terminal->Print</a>(XPoint __p, char *__fmt, ...)<br>
+void XPrintChar(XPoint __p, chtype __c) -> <a href="XTerminal.html#PrintChar">Terminal->PrintChar</a>(XPoint __p, chtype __c)<br>
+void XRefresh() -> <a href="XTerminal.html#Refresh">Terminal->Refresh</a>()<br>
+void XResize() -> <a href="XTerminal.html#Resize">Terminal->Resize</a>()<br>
+void XPutWindow(XRect __r, chtype *__buff) -> <a href="XTerminal.html#PutWindow">Terminal->PutWindow</a>(XRect __r, chtype *__buff)<br>
+void XSetColor(unsigned __f, unsigned __b) -> <a href="XTerminal.html#SetColor">Terminal->SetColor</a>(unsigned __f, unsigned __b)<br>
+void XSetInputState(unsigned __Mask, unsigned __BoolValue) -> <a href="XTerminal.html#SetInputState">Terminal->SetInputState</a>(unsigned __Mask, unsigned __BoolValue)<br>
+void XSetOutputState(unsigned __Mask, unsigned __BoolValue) -> <a href="XTerminal.html#SetInputState">Terminal->SetOutputState</a>(unsigned __Mask, unsigned __BoolValue)<br>
+void XSetState(unsigned __Mask, unsigned __BoolValue) -> <a href="XTerminal.html#SetInputState">Terminal->SetState</a>(unsigned __Mask, unsigned __BoolValue)<br>
+
+<br><hr>
+Copyright &copy;1998-2001 <a href="mailto:dragos@iname.com">Dragos Acostachioaie</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+
+</html>

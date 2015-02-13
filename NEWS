@@ -1,0 +1,12 @@
+Xterminal v1.0.7
+December 22, 2002
+NEWS: News in this release
+Copyright (c) 1999-2002 Dragos Acostachioaie
+
+NEWS since 1.0.6:
+
+BUG FIXES:
+- XtInputStringField, XtList fixes
+
+PORTABILITY FIXES:
+- disable usage of ncurses internal structures by default

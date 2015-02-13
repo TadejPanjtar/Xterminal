@@ -1,0 +1,135 @@
+dnl configure.in for Xterminal library
+dnl Copyright (c) 1997-2002 Dragos Acostachioaie
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(src/xobject.cc)
+AC_LANG_CPLUSPLUS
+AC_PREFIX_DEFAULT(/usr)
+
+dnl Set versioning informations
+VERSION="1.0.7"
+CURRENT=16
+REVISION=1
+AGE=10
+AC_SUBST(CURRENT)
+AC_SUBST(REVISION)
+AC_SUBST(AGE)
+
+dnl Initialize automake
+AM_INIT_AUTOMAKE(Xterminal, $VERSION)
+AM_CONFIG_HEADER(include/xconfig.h)
+
+dnl Checks for the canonical system name
+AC_CANONICAL_HOST
+
+dnl Checks for programs.
+AC_PROG_CC
+AC_PROG_CXX
+
+dnl Checks for libtool
+AM_ENABLE_SHARED
+AM_DISABLE_STATIC
+AM_PROG_LIBTOOL
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS(sys/ioctl.h string.h strings.h unistd.h)
+AM_HEADER_TIOCGWINSZ_NEEDS_SYS_IOCTL
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_STRUCT_TM
+
+dnl Checks for library functions.
+AC_PROG_GCC_TRADITIONAL
+AC_TYPE_SIGNAL
+AC_FUNC_VPRINTF
+AC_CHECK_FUNCS(strdup strtod)
+
+dnl Set compiler flags
+CXXFLAGS="-O2 -w"
+
+dnl Checks if we are going to enable signal translation into events
+AC_ARG_ENABLE(signals,
+    [  --disable-signals       Turn off signal translation into events],,
+    AC_DEFINE(SIGNAL_CATCHING, 1, Define if you want to catch the signals and translate them into events)
+)
+
+dnl Checks if we should enable that ugly (but efficient) ncurses hacks
+AC_ARG_ENABLE(ncurses-hacks,
+    [  --enable-ncurses-hacks  Make use of the ncurses internal structures],
+    AC_DEFINE(USE_NCURSES_HACKS, 1, Define if you want to use that ugly ncurses hacks)
+)
+
+dnl Checks if we are going to enable debugging
+AC_ARG_ENABLE(debug,
+    [  --enable-debug          Turn on debugging],
+    AC_DEFINE(DEBUG, 1, Define if you want to generate debugging informations)
+    CXXFLAGS="$CXXFLAGS -g"
+)
+
+dnl Checks if we are going to use slang as curses library
+AC_ARG_WITH(slang,
+    [  --with-slang            Use slang library instead of ncurses],
+    withslang=x$withval,
+    withslang=xno
+)
+if test $withslang = xyes; then
+    AC_CHECK_LIB(slang, main, [
+    AC_DEFINE(HAVE_SLANG, 1, Define if you are using `slang' as curses library)
+    LIBS="-lslang"
+    CPPFLAGS="$CPPFLAGS -I/usr/include/slang"],
+    AC_MSG_WARN(Slang library not found, trying ncurses)
+    )
+fi
+
+dnl Checks for ncurses
+if test "$ac_cv_lib_slang_main" != "yes"; then
+AC_CHECK_LIB(ncurses, main, [
+    AC_DEFINE(HAVE_NCURSES, 1, Define if you are using `ncurses' as curses library)
+    LIBS="-lncurses"
+    CPPFLAGS="$CPPFLAGS -I/usr/include/ncurses"],
+    AC_MSG_ERROR(No curses library found)
+)
+fi
+
+dnl Checks if we are providing mouse support
+AC_ARG_WITH(gpm,
+    [  --without-gpm           Disable GPM mouse support],
+    withgpm=x$withval,
+    withgpm=xyes
+)
+if test $withgpm = xyes; then
+    AC_CHECK_LIB(gpm, main, [
+    AC_DEFINE(HAVE_LIBGPM, 1, Define if you want to use Linux console mouse support)
+    LIBS="$LIBS -lgpm"])
+fi
+
+dnl Checks for curses capabilities.
+AC_CHECK_FUNCS(resizeterm)
+
+AC_MSG_CHECKING(for ESCDELAY support)
+if test "$ac_cv_lib_ncurses_main" = "yes"; then
+    AC_CACHE_VAL(ac_cv_have_escdelay,
+	AC_TRY_LINK([
+	#include <curses.h>], [
+	{
+	    ESCDELAY = 0;
+	}],
+	ac_cv_have_escdelay=yes,
+	ac_cv_have_escdelay=no)
+    )
+fi
+if test "$ac_cv_lib_slang_main" = "yes"; then
+    ac_cv_have_escdelay=yes
+fi
+AC_MSG_RESULT($ac_cv_have_escdelay)
+if test "$ac_cv_have_escdelay" = "yes"; then
+    AC_DEFINE(HAVE_ESCDELAY, 1, Define if your curses have `ESCDELAY')
+fi
+
+if test "$CC" = "gcc"; then
+    CXXFLAGS="$CXXFLAGS -funsigned-char -fthis-is-variable -falt-external-templates"
+fi
+
+includedir="$includedir/Xterminal"
+
+AC_OUTPUT(Makefile src/Makefile include/Makefile example/Makefile)

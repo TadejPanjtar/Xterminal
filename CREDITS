@@ -1,0 +1,41 @@
+Xterminal v1.0.x
+December 22, 2002
+CREDITS: People that contributed on this project
+
+Dragos Acostachioaie <dragos@biosfarm.ro>
+	He elaborated it's concept and structure and written the foundation
+	class, XObject, and other classes. He is also the current maintainer
+	of the project.
+
+Pavel Andreew <pavel@collage.etel.ru>
+	Fixed lot of bugs, added XtComboBox
+
+Sjoerd de Heer <s.a.deheer@student.utwente.nl>
+	Added support for selecting a given number of elements in XtList
+
+Bernd Kalbfuss <slice@t-online.de>
+	Designed the event handling model and written parts of the
+	documentation.
+
+Ric Klaren <ia_ric@cs.utwente.nl>
+	Written the hierarchical list class, XtHList
+
+Udo Kreckel <udokre@gmx.de>
+	Added multi-line and right-justified input fields, fixed lot of bugs.
+
+Adrian Teohar <silconex@mail.dntis.ro>
+	Written various classes and worked together with Dragos at the
+	basically classes. Retired.
+
+	Many other people contributed with bug reports, suggestions, ideas:
+
+Bob Bernstein <bernie@brainiac.com> (STL suggestions)
+Alex Buell <alex.buell@tahallah.demon.co.uk> (Makefile suggestions)
+Anton Dedov <bada@prgn.ru> (several patches)
+Vandenbrouck Gregory <vdb@pipo.com>
+Thanh Q. Ma <thanh.ma@east.sun.com> (Solaris tests)
+Joseph Martin <martinja@exis.net> (bug reports)
+Philippe Martin <pmartin@eridan-info.fr> (small fix)
+Uwe Steinmann <steinm@gehtnix.fernuni-hagen.de> (several bug reports)
+Salvador Eduardo Tropea <salvador@inti.gov.ar>
+Andrej Wladimirowicz <red@skazna.ru> (FreeBSD tests)

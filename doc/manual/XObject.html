@@ -1,0 +1,439 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XObject</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.3.17-pre4">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>class  <A HREF="#DOC.DOCU">XObject</A>: public <!1><A HREF="XEventBroker.html">XEventBroker</A>, public <!1><A HREF="XObjectEventListener.html">XObjectEventListener</A></H2>
+<BLOCKQUOTE>Foundation class</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<H3>XObject
+- <A HREF="XEventBroker.html">XEventBroker</A>
+</H3>
+<H3>XObject
+- <A HREF="XObjectEventListener.html">XObjectEventListener</A>
+- <A HREF="XEventListener.html">XEventListener</A>
+</H3>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.14.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XObject</B>(<!1><A HREF="XRect.html">XRect</A> __Bounds)
+<DD><I>Constructs a new XObject with the specified bounds</I>
+<DT>
+<A HREF="#DOC.14.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <B>~XObject</B>()
+<DD><I>Destructs the object's instance</I>
+<DT>
+<A HREF="#DOC.14.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>CalculateBounds</B>()
+<DD><I>Computes the object's size and the real bounds.</I>
+<DT>
+<A HREF="#DOC.14.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Draw</B>()
+<DD><I>Paints the visual object content onto the terminal's screen.</I>
+<DT>
+<A HREF="#DOC.14.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XRect.html">XRect</A> <B>GetBounds</B>()
+<DD><I>Returns the object's bounds</I>
+<DT>
+<A HREF="#DOC.14.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="XEvent.html">XEvent</A>* <B>GetEvent</B>()
+<DD><I>Returns the first event addressed to this object, zero if none</I>
+<DT>
+<A HREF="#DOC.14.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned long <B>GetId</B>()
+<DD><I>Returns the object's id</I>
+<DT>
+<A HREF="#DOC.14.19"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>char* <B>GetObjClass</B>()
+<DD><I>Returns the objects's class name</I>
+<DT>
+<A HREF="#DOC.14.20"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html">XPoint</A> <B>GetOrigin</B>()
+<DD><I>Returns the object's origin</I>
+<DT>
+<A HREF="#DOC.14.21"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   char* <B>GetPalette</B>()
+<DD><I>Returns the object's attached color palette</I>
+<DT>
+<A HREF="#DOC.14.22"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   unsigned <B>GetPalEntry</B>(unsigned __Index)
+<DD><I>Returns the color value with __Index position inside the palette</I>
+<DT>
+<A HREF="#DOC.14.23"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html">XPoint</A> <B>GetSize</B>()
+<DD><I>Returns the object's size</I>
+<DT>
+<A HREF="#DOC.14.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned long <B>GetState</B>()
+<DD><I>Returns the object state register.</I>
+<DT>
+<A HREF="#DOC.14.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>GetState</B>(unsigned long __Mask)
+<DD><I>Returns the value of the specified object's state </I>
+<DT>
+<A HREF="#DOC.14.24"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>HandleEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DD><I>Handles the event passed as argument, by calling <i>ProcessEvent()</i></I>
+<DT>
+<A HREF="#DOC.14.25"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>MoveTo</B>(<!1><A HREF="XPoint.html">XPoint</A> __p)
+<DD><I>Moves the object's origin to the specified point</I>
+<DT>
+<A HREF="#DOC.14.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DD><I>Receives incoming events and distributes them using the <!1><A HREF="XObjectEventListener.html#DOC.13.1">ProcessEvent</A> method of <!1><A HREF="XObjectEventListener.html">XObjectEventListener</A> class.</I>
+<DT>
+<A HREF="#DOC.14.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>RegisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+<DD><I>Registers the specified XObject as client.</I>
+<DT>
+<A HREF="#DOC.14.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Resize</B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DD><I>Adjusts the object's size with the specified coordinates </I>
+<DT>
+<A HREF="#DOC.14.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetPalette</B>(char *__Pal, unsigned __PalLen)
+<DD><I>Sets the object's attached color palette </I>
+<DT>
+<A HREF="#DOC.14.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetState</B>(unsigned long __Mask, bool __BoolValue)
+<DD><I>Sets the value of the specified object state </I>
+<DT>
+<A HREF="#DOC.14.26"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>UnregisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+<DD><I>Unregisters the specified client</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<A HREF="#DOC.14.27"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned long <B>Id</B>
+<DD><I>Object's unique identificator</I>
+<DT>
+<A HREF="#DOC.14.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned long <B>State</B>
+<DD><I>Current properties of the object.</I>
+<DT>
+<A HREF="#DOC.14.28"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html">XPoint</A> <B>Origin</B>
+<DD><I>Object's upper-left coordinate, relative to it's server</I>
+<DT>
+<A HREF="#DOC.14.29"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html">XPoint</A> <B>Size</B>
+<DD><I>Object's size</I>
+<DT>
+<A HREF="#DOC.14.30"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html">XPoint</A> <B>Cursor</B>
+<DD><I>Cursor's position inside the object's bounds</I>
+<DT>
+<A HREF="#DOC.14.31"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XRect.html">XRect</A> <B>Bounds</B>
+<DD><I>This are the *real* bounds, in absolute coordinates</I>
+<DT>
+<A HREF="#DOC.14.32"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>char <B>ObjClass</B>[40]
+<DD><I>Name of the class the object belongs, choosen by the programmer</I>
+<DT>
+<A HREF="#DOC.14.33"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>char <B>Pal</B>[80]
+<DD><I>Object's attached color palette</I>
+<DT>
+<A HREF="#DOC.14.34"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned <B>PalLen</B>
+<DD><I>Palette size</I>
+<DT>
+<A HREF="#DOC.14.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XObject.html#DOC.14.14">XObject</A>* <B>Server</B>
+<DD><I>Server to which the object is registered (and which services he uses), or zero if the object have no server.</I>
+<DT>
+<A HREF="#DOC.14.35"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>ClientList <B>Clients</B>
+<DD><I>Linked list of object's registered clients</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<A HREF="#DOC.14.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, long __Message)
+<DD><I>Sends a "long" message </I>
+<DT>
+<A HREF="#DOC.14.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size)
+<DD><I>Sends a "void *" message </I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventBroker.html">XEventBroker</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>AddListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>Map <B>__map</B>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObjectEventListener.html">XObjectEventListener</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessMouseEvent</B>(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessKeyboardEvent</B>(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessMessage</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessCommand</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessSignal</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessBroadcast</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventListener.html">XEventListener</A>:</H3>
+<DL>
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Inherited by most Xterminal classes
+
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="XObject">
+<A NAME="DOC.14.14">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XObject(<!1><A HREF="XRect.html">XRect</A> __Bounds)</B></TT>
+<DD>Constructs a new XObject with the specified bounds
+<DL><DT><DD></DL><P>
+<A NAME="~XObject">
+<A NAME="DOC.14.15">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~XObject()</B></TT>
+<DD>Destructs the object's instance
+<DL><DT><DD></DL><P>
+<A NAME="CalculateBounds">
+<A NAME="DOC.14.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void CalculateBounds()</B></TT>
+<DD>Computes the object's size and the real bounds.
+This method is used by the <!1><A HREF="XObject.html#DOC.14.6">RegisterClient</A> method
+<DL><DT><DD></DL><P>
+<A NAME="Draw">
+<A NAME="DOC.14.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Draw()</B></TT>
+<DD>Paints the visual object content onto the terminal's screen.
+Remember to call XRefresh() before return so the draw becomes visible!
+<DL><DT><DD></DL><P>
+<A NAME="GetBounds">
+<A NAME="DOC.14.16">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XRect.html">XRect</A> GetBounds()</B></TT>
+<DD>Returns the object's bounds
+<DL><DT><DD></DL><P>
+<A NAME="GetEvent">
+<A NAME="DOC.14.17">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="XEvent.html">XEvent</A>* GetEvent()</B></TT>
+<DD>Returns the first event addressed to this object, zero if none
+<DL><DT><DD></DL><P>
+<A NAME="GetId">
+<A NAME="DOC.14.18">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned long GetId()</B></TT>
+<DD>Returns the object's id
+<DL><DT><DD></DL><P>
+<A NAME="GetObjClass">
+<A NAME="DOC.14.19">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* GetObjClass()</B></TT>
+<DD>Returns the objects's class name
+<DL><DT><DD></DL><P>
+<A NAME="GetOrigin">
+<A NAME="DOC.14.20">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html">XPoint</A> GetOrigin()</B></TT>
+<DD>Returns the object's origin
+<DL><DT><DD></DL><P>
+<A NAME="GetPalette">
+<A NAME="DOC.14.21">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   char* GetPalette()</B></TT>
+<DD>Returns the object's attached color palette
+<DL><DT><DD></DL><P>
+<A NAME="GetPalEntry">
+<A NAME="DOC.14.22">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   unsigned GetPalEntry(unsigned __Index)</B></TT>
+<DD>Returns the color value with __Index position inside the palette
+<DL><DT><DD></DL><P>
+<A NAME="GetSize">
+<A NAME="DOC.14.23">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html">XPoint</A> GetSize()</B></TT>
+<DD>Returns the object's size
+<DL><DT><DD></DL><P>
+<A NAME="GetState">
+<A NAME="DOC.14.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned long GetState()</B></TT>
+<DD>Returns the object state register.
+The returned value must be processed next with the state masks the
+object uses to gain valuable information
+<DL><DT><DD></DL><P>
+<A NAME="GetState">
+<A NAME="DOC.14.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool GetState(unsigned long __Mask)</B></TT>
+<DD>Returns the value of the specified object's state
+
+<DL><DT><DT><B>Returns:</B><DD>true if bit set
+<DT><B>Parameters:</B><DD><B>__Mask</B> -  state mask
+<BR><DD></DL><P>
+<A NAME="HandleEvent">
+<A NAME="DOC.14.24">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void HandleEvent(<!1><A HREF="XEvent.html">XEvent</A> *__Event)</B></TT>
+<DD>Handles the event passed as argument, by calling <i>ProcessEvent()</i>
+<DL><DT><DD></DL><P>
+<A NAME="MoveTo">
+<A NAME="DOC.14.25">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void MoveTo(<!1><A HREF="XPoint.html">XPoint</A> __p)</B></TT>
+<DD>Moves the object's origin to the specified point
+<DL><DT><DD></DL><P>
+<A NAME="ProcessEvent">
+<A NAME="DOC.14.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessEvent(<!1><A HREF="XEvent.html">XEvent</A> *__Event)</B></TT>
+<DD>Receives incoming events and distributes them using the
+<!1><A HREF="XObjectEventListener.html#DOC.13.1">ProcessEvent</A> method of
+<!1><A HREF="XObjectEventListener.html">XObjectEventListener</A> class.
+(also being careful not to treat keyboard events if the object does not
+own the focus)
+
+<DL><DT><DT><B>Returns:</B><DD>true if event was processed
+<DD></DL><P>
+<A NAME="RegisterClient">
+<A NAME="DOC.14.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void RegisterClient(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)</B></TT>
+<DD>Registers the specified XObject as client.
+It also adjusts the client's bounds and enables the <i>SM_NO_REFRESH</i>
+flag for the newly registered client
+<DL><DT><DD></DL><P>
+<A NAME="Resize">
+<A NAME="DOC.14.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Resize(<!1><A HREF="XPoint.html">XPoint</A> __delta)</B></TT>
+<DD>Adjusts the object's size with the specified coordinates
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__delta</B> -  translation vector<BR><DD></DL><P>
+<A NAME="SetPalette">
+<A NAME="DOC.14.8">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetPalette(char *__Pal, unsigned __PalLen)</B></TT>
+<DD>Sets the object's attached color palette
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Pal</B> -  new palette
+<BR><B>__PalLen</B> -  new palette size<BR><DD></DL><P>
+<A NAME="SetState">
+<A NAME="DOC.14.9">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetState(unsigned long __Mask, bool __BoolValue)</B></TT>
+<DD>Sets the value of the specified object state
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Mask</B> -  state mask
+<BR><B>__BoolValue</B> -  set bit if non-zero, otherwise clear it<BR><DD></DL><P>
+<A NAME="UnregisterClient">
+<A NAME="DOC.14.26">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void UnregisterClient(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)</B></TT>
+<DD>Unregisters the specified client
+<DL><DT><DD></DL><P>
+<A NAME="Id">
+<A NAME="DOC.14.27">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned long Id</B></TT>
+<DD>Object's unique identificator
+<DL><DT><DD></DL><P>
+<A NAME="State">
+<A NAME="DOC.14.10">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned long State</B></TT>
+<DD>Current properties of the object.
+The different states can be ORed. The common used states are:
+<p><b>SM_VISIBLE</b> indicates that the object is currently visible on the
+terminal's screen, so it is in a drawn state
+<p><b>SM_CURSOR_VISIBLE</b> indicates that the cursor is currently visible and
+it's inside the object's bounds
+<p><b>SM_FOCUSED</b> indicates that the object has the control at the
+respective moment (only one object can have the control at a
+moment, so if the user press, let's say, a key, this object will
+receive the event)
+<p><b>SM_DRAGGING</b> indicates that the objects is currently dragged on the
+terminal's screen
+<p><b>SM_DISABLED</b> indicates that the object is deactivated at the moment
+<p><b>SM_ACTIVE</b> indicates that the object is active, so the user has
+control over it
+<p><b>SM_NO_REFRESH</b> indicates that the object's Draw() method will not
+dump it's contents to the screen by calling XRefresh(), but will let
+it's server to do this instead
+<DL><DT><DD></DL><P>
+<A NAME="Origin">
+<A NAME="DOC.14.28">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html">XPoint</A> Origin</B></TT>
+<DD>Object's upper-left coordinate, relative to it's server
+<DL><DT><DD></DL><P>
+<A NAME="Size">
+<A NAME="DOC.14.29">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html">XPoint</A> Size</B></TT>
+<DD>Object's size
+<DL><DT><DD></DL><P>
+<A NAME="Cursor">
+<A NAME="DOC.14.30">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html">XPoint</A> Cursor</B></TT>
+<DD>Cursor's position inside the object's bounds
+<DL><DT><DD></DL><P>
+<A NAME="Bounds">
+<A NAME="DOC.14.31">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XRect.html">XRect</A> Bounds</B></TT>
+<DD>This are the *real* bounds, in absolute coordinates
+<DL><DT><DD></DL><P>
+<A NAME="ObjClass">
+<A NAME="DOC.14.32">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char ObjClass[40]</B></TT>
+<DD>Name of the class the object belongs, choosen by the programmer
+<DL><DT><DD></DL><P>
+<A NAME="Pal">
+<A NAME="DOC.14.33">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char Pal[80]</B></TT>
+<DD>Object's attached color palette
+<DL><DT><DD></DL><P>
+<A NAME="PalLen">
+<A NAME="DOC.14.34">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned PalLen</B></TT>
+<DD>Palette size
+<DL><DT><DD></DL><P>
+<A NAME="Server">
+<A NAME="DOC.14.11">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XObject.html#DOC.14.14">XObject</A>* Server</B></TT>
+<DD>Server to which the object is registered (and which services he uses),
+or zero if the object have no server.
+(If you are not familiar with the client-server concept, try to think
+to the server as the object's parent)
+<DL><DT><DD></DL><P>
+<A NAME="Clients">
+<A NAME="DOC.14.35">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ClientList Clients</B></TT>
+<DD>Linked list of object's registered clients
+<DL><DT><DD></DL><P>
+<A NAME="SendMessage">
+<A NAME="DOC.14.12">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool SendMessage(unsigned long __Receiver, unsigned long __Class, long __Message)</B></TT>
+<DD>Sends a "long" message
+
+<DL><DT><DT><B>Returns:</B><DD>false if destination does not exists
+<DT><B>Parameters:</B><DD><B>__Receiver</B> -  destination object id
+<BR><B>__Class</B> -  message class
+<BR><B>__Message</B> -  the message itself
+<BR><DD></DL><P>
+<A NAME="SendMessage">
+<A NAME="DOC.14.13">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool SendMessage(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size)</B></TT>
+<DD>Sends a "void *" message
+
+<DL><DT><DT><B>Returns:</B><DD>false if destination does not exists
+<DT><B>Parameters:</B><DD><B>__Receiver</B> -  destination object id
+<BR><B>__Class</B> -  message class
+<BR><B>__Body</B> -  the message itself
+<BR><B>__Size</B> -  size of __Body pointer
+<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="XtWindow.html">XtWindow</A><BR>
+<A HREF="XtStatusLine.html">XtStatusLine</A><BR>
+<A HREF="XtStaticText.html">XtStaticText</A><BR>
+<A HREF="XtScrollBar.html">XtScrollBar</A><BR>
+<A HREF="XtRadioButton.html">XtRadioButton</A><BR>
+<A HREF="XtProgressBar.html">XtProgressBar</A><BR>
+<A HREF="XtMenu.html">XtMenu</A><BR>
+<A HREF="XtList.html">XtList</A><BR>
+<A HREF="XtInputStringField.html">XtInputStringField</A><BR>
+<A HREF="XtHList.html">XtHList</A><BR>
+<A HREF="XtDialog.html">XtDialog</A><BR>
+<A HREF="XtCheckButton.html">XtCheckButton</A><BR>
+<A HREF="XtButton.html">XtButton</A><BR>
+<A HREF="XtBackground.html">XtBackground</A><BR>
+</DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998-2001 <a href="mailto:dragos@iname.com">Dragos Acostachioaie</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

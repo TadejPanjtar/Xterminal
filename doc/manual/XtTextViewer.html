@@ -1,0 +1,242 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XtTextViewer</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.3.17-pre4">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>class  <A HREF="#DOC.DOCU">XtTextViewer</A>: public <!1><A HREF="XtWindow.html#DOC.43.3">XtWindow</A></H2>
+<BLOCKQUOTE>Text file viewer</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<H3>XtTextViewer
+- <A HREF="XtWindow.html">XtWindow</A>
+- <A HREF="XObject.html">XObject</A>
+- <A HREF="XEventBroker.html">XEventBroker</A>
+</H3>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.36.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XtTextViewer</B>(<!1><A HREF="XRect.html">XRect</A> __r, char *__FileName, char *__Title)
+<DD><I>Constructs a new XtTextViewer using the specified bounds, file name and title</I>
+<DT>
+<A HREF="#DOC.36.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>~XtTextViewer</B>()
+<DD><I>Destructs the object's instance</I>
+<DT>
+<A HREF="#DOC.36.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Draw</B>()
+<DD><I>Draws the object</I>
+<DT>
+<A HREF="#DOC.36.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessKeyboardEvent</B>(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)
+<DD><I>Process keyboard events</I>
+<DT>
+<A HREF="#DOC.36.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessMessage</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DD><I>Process messages</I>
+<DT>
+<A HREF="#DOC.36.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   int <B>Run</B>()
+<DD><I>"Runs" the text viewer.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<A HREF="#DOC.36.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>InitScrollBar</B>()
+<DD><I>Initialize the associated scroll bars</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XtWindow.html">XtWindow</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>Close</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>MoveTo</B>(<!1><A HREF="XPoint.html">XPoint</A> __p)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessMouseEvent</B>(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>Resize</B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetFrame</B>(char *__Frame)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetTitle</B>(char *__Title)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetState</B>(unsigned long __Mask, bool __BoolValue)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>chtype* <B>Buffer</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char* <B>Title</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>Frame</B>[10]
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>FrameUpdate</B>()
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObject.html">XObject</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>CalculateBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>GetBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   <!1><A HREF="XEvent.html">XEvent</A>* <B>GetEvent</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetId</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char* <B>GetObjClass</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetOrigin</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   char* <B>GetPalette</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   unsigned <B>GetPalEntry</B>(unsigned __Index)
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetSize</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetState</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>GetState</B>(unsigned long __Mask)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>HandleEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>RegisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetPalette</B>(char *__Pal, unsigned __PalLen)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>UnregisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>Id</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>State</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Origin</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Size</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Cursor</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>Bounds</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>ObjClass</B>[40]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>Pal</B>[80]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned <B>PalLen</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XObject.html#DOC.14.14">XObject</A>* <B>Server</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>ClientList <B>Clients</B>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, long __Message)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventBroker.html">XEventBroker</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>AddListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>Map <B>__map</B>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObjectEventListener.html">XObjectEventListener</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessCommand</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessSignal</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessBroadcast</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventListener.html">XEventListener</A>:</H3>
+<DL>
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Text file viewer</BLOCKQUOTE>
+<DL>
+
+<A NAME="XtTextViewer">
+<A NAME="DOC.36.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XtTextViewer(<!1><A HREF="XRect.html">XRect</A> __r, char *__FileName, char *__Title)</B></TT>
+<DD>Constructs a new XtTextViewer using the specified bounds, file name and title
+<DL><DT><DD></DL><P>
+<A NAME="~XtTextViewer">
+<A NAME="DOC.36.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~XtTextViewer()</B></TT>
+<DD>Destructs the object's instance
+<DL><DT><DD></DL><P>
+<A NAME="Draw">
+<A NAME="DOC.36.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Draw()</B></TT>
+<DD>Draws the object
+<DL><DT><DD></DL><P>
+<A NAME="ProcessKeyboardEvent">
+<A NAME="DOC.36.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessKeyboardEvent(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)</B></TT>
+<DD>Process keyboard events
+<DL><DT><DD></DL><P>
+<A NAME="ProcessMessage">
+<A NAME="DOC.36.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessMessage(<!1><A HREF="XMessage.html">XMessage</A> *__Event)</B></TT>
+<DD>Process messages
+<DL><DT><DD></DL><P>
+<A NAME="Run">
+<A NAME="DOC.36.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   int Run()</B></TT>
+<DD>"Runs" the text viewer.
+Listens for events, process them, until the viewer window is closed
+(e.g. the <i>CM_CLOSE</i> command is received)
+<DL><DT><DD></DL><P>
+<A NAME="InitScrollBar">
+<A NAME="DOC.36.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void InitScrollBar()</B></TT>
+<DD>Initialize the associated scroll bars
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998-2001 <a href="mailto:dragos@iname.com">Dragos Acostachioaie</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

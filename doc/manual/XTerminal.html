@@ -1,0 +1,474 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XTerminal</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.3.17-pre4">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>class  <A HREF="#DOC.DOCU">XTerminal</A></H2>
+<BLOCKQUOTE>Class that abstractize the input/output operations with the terminal</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.39.22"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XTerminal</B>()
+<DD><I>Initialize the terminal</I>
+<DT>
+<A HREF="#DOC.39.23"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <B>~XTerminal</B>()
+<DD><I>Deinitialize the terminal</I>
+<DT>
+<A HREF="#DOC.39.24"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Beep</B>()
+<DD><I>Sounds an audible alarm on the terminal</I>
+<DT>
+<A HREF="#DOC.39.25"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Clear</B>()
+<DD><I>Clears all terminal's screen content</I>
+<DT>
+<A HREF="#DOC.39.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>ColorWindow</B>(<!1><A HREF="XRect.html">XRect</A> __r, unsigned __f, unsigned __b)
+<DD><I>Fills a area with a specified color, clearing it's content </I>
+<DT>
+<A HREF="#DOC.39.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>ColorWindowContent</B>(<!1><A HREF="XRect.html">XRect</A> __r, unsigned __f, unsigned __b)
+<DD><I>Change the color of a specified area, without altering it's content </I>
+<DT>
+<A HREF="#DOC.39.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>DrawBorder</B>(<!1><A HREF="XRect.html">XRect</A> __r, char *__frame)
+<DD><I>Draws a box using some specified characters for it's margins </I>
+<DT>
+<A HREF="#DOC.39.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>FillWindow</B>(<!1><A HREF="XRect.html">XRect</A> __r, chtype __c)
+<DD><I>Fills a area with a specified character </I>
+<DT>
+<A HREF="#DOC.39.26"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>GetColor</B>(unsigned *__f, unsigned *__b)
+<DD><I>Gets the current foreground and background color, respectively</I>
+<DT>
+<A HREF="#DOC.39.27"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="XPoint.html">XPoint</A> <B>GetCursorPosition</B>()
+<DD><I>Returns the current cursor position</I>
+<DT>
+<A HREF="#DOC.39.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="XEvent.html">XEvent</A>* <B>GetEvent</B>()
+<DD><I>Returns the first available event.</I>
+<DT>
+<A HREF="#DOC.39.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   unsigned <B>GetInputState</B>(unsigned long __Mask)
+<DD><I>Returns the value of the terminal input state.</I>
+<DT>
+<A HREF="#DOC.39.28"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   int <B>GetInputTimeout</B>()
+<DD><I>Returns the current timeout used for special codes receiving</I>
+<DT>
+<A HREF="#DOC.39.29"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   char* <B>GetName</B>()
+<DD><I>Returns the current terminal's name</I>
+<DT>
+<A HREF="#DOC.39.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   unsigned <B>GetPalEntry</B>(char *__Pal, unsigned __Len, unsigned __Index)
+<DD><I>Returns the correct palette entry </I>
+<DT>
+<A HREF="#DOC.39.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   unsigned <B>GetOutputState</B>(unsigned long __Mask)
+<DD><I>Returns the value of the terminal output state.</I>
+<DT>
+<A HREF="#DOC.39.30"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="XPoint.html">XPoint</A> <B>GetSize</B>()
+<DD><I>Returns the terminal's size</I>
+<DT>
+<A HREF="#DOC.39.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>GetState</B>(unsigned long __Mask)
+<DD><I>Returns the terminal general state.</I>
+<DT>
+<A HREF="#DOC.39.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>GetWindow</B>(<!1><A HREF="XRect.html">XRect</A> __r, chtype *__buff)
+<DD><I>Save the visual content of a specified area into a memory area.</I>
+<DT>
+<A HREF="#DOC.39.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>IsValid</B>(<!1><A HREF="XPoint.html">XPoint</A> __p)
+<DD><I>Checks if a point have valid coordinates </I>
+<DT>
+<A HREF="#DOC.39.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>IsValid</B>(<!1><A HREF="XRect.html">XRect</A> __r)
+<DD><I>Checks if a rectangle have valid coordinates </I>
+<DT>
+<A HREF="#DOC.39.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>MoveCursor</B>(<!1><A HREF="XPoint.html">XPoint</A> __p)
+<DD><I>Moves the cursor to a specified location </I>
+<DT>
+<A HREF="#DOC.39.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Print</B>(<!1><A HREF="XPoint.html">XPoint</A> __p, char *__fmt, ...)
+<DD><I>Prints something to the terminal.</I>
+<DT>
+<A HREF="#DOC.39.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>PrintChar</B>(<!1><A HREF="XPoint.html">XPoint</A> __p, chtype __c)
+<DD><I>Prints a single character to the terminal </I>
+<DT>
+<A HREF="#DOC.39.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Refresh</B>()
+<DD><I>Effectively dumps the current terminal contents to the screen.</I>
+<DT>
+<A HREF="#DOC.39.31"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Resize</B>()
+<DD><I>Resizes the terminal using current values</I>
+<DT>
+<A HREF="#DOC.39.32"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Resume</B>()
+<DD><I>Restores a previous suspended terminal</I>
+<DT>
+<A HREF="#DOC.39.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>PutWindow</B>(<!1><A HREF="XRect.html">XRect</A> __r, chtype *__buff)
+<DD><I>Copies a previous saved screen area to the terminal </I>
+<DT>
+<A HREF="#DOC.39.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetColor</B>(unsigned __f, unsigned __b)
+<DD><I>Sets the current terminal color.</I>
+<DT>
+<A HREF="#DOC.39.19"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetInputState</B>(unsigned long __Mask, bool __BoolValue)
+<DD><I>Sets the state of the specified terminal input state.</I>
+<DT>
+<A HREF="#DOC.39.20"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetOutputState</B>(unsigned long __Mask, bool __BoolValue)
+<DD><I>Sets the state of the specified terminal output state.</I>
+<DT>
+<A HREF="#DOC.39.21"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetState</B>(unsigned long __Mask, bool __BoolValue)
+<DD><I>Sets the state of the specified terminal general state.</I>
+<DT>
+<A HREF="#DOC.39.33"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Suspend</B>()
+<DD><I>Saves the current terminal state and falls back to startup state</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<A HREF="#DOC.39.34"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned long <B>InputState</B>
+<DD><I>Current input, output and respectively general properties of the terminal</I>
+<DT>
+<A HREF="#DOC.39.35"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html">XPoint</A> <B>Cursor</B>
+<DD><I>Current cursor position</I>
+<DT>
+<A HREF="#DOC.39.36"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html">XPoint</A> <B>Size</B>
+<DD><I>Terminal size</I>
+<DT>
+<A HREF="#DOC.39.37"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>char* <B>Name</B>
+<DD><I>Terminal name</I>
+<DT>
+<A HREF="#DOC.39.38"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned <B>ForegroundColor</B>
+<DD><I>Current foreground, respectively background color</I>
+<DT>
+<A HREF="#DOC.39.39"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned <B>UseFunctionKeys</B>
+<DD><I>True if generating events on function keys pressing (normally set)</I>
+<DT>
+<A HREF="#DOC.39.40"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int <B>InputTimeout</B>
+<DD><I>Timeout for receiving special codes (e.g. for function keys)</I>
+<DT>
+<A HREF="#DOC.39.41"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int <B>EscTimeout</B>
+<DD><I>Timeout for receiving ESC codes</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<A HREF="#DOC.39.42"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Init</B>()
+<DD><I>Called by constructor</I>
+<DT>
+<A HREF="#DOC.39.43"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Done</B>()
+<DD><I>Called by destructor</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Class that abstractize the input/output operations with the terminal</BLOCKQUOTE>
+<DL>
+
+<A NAME="XTerminal">
+<A NAME="DOC.39.22">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XTerminal()</B></TT>
+<DD>Initialize the terminal
+<DL><DT><DD></DL><P>
+<A NAME="~XTerminal">
+<A NAME="DOC.39.23">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~XTerminal()</B></TT>
+<DD>Deinitialize the terminal
+<DL><DT><DD></DL><P>
+<A NAME="Beep">
+<A NAME="DOC.39.24">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Beep()</B></TT>
+<DD>Sounds an audible alarm on the terminal
+<DL><DT><DD></DL><P>
+<A NAME="Clear">
+<A NAME="DOC.39.25">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Clear()</B></TT>
+<DD>Clears all terminal's screen content
+<DL><DT><DD></DL><P>
+<A NAME="ColorWindow">
+<A NAME="DOC.39.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void ColorWindow(<!1><A HREF="XRect.html">XRect</A> __r, unsigned __f, unsigned __b)</B></TT>
+<DD>Fills a area with a specified color, clearing it's content
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  area to fill
+<BR><B>__f</B> -  desired foreground color
+<BR><B>__b</B> -  desired background color<BR><DD></DL><P>
+<A NAME="ColorWindowContent">
+<A NAME="DOC.39.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void ColorWindowContent(<!1><A HREF="XRect.html">XRect</A> __r, unsigned __f, unsigned __b)</B></TT>
+<DD>Change the color of a specified area, without altering it's content
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  area to fill
+<BR><B>__f</B> -  desired foreground color
+<BR><B>__b</B> -  desired background color<BR><DD></DL><P>
+<A NAME="DrawBorder">
+<A NAME="DOC.39.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void DrawBorder(<!1><A HREF="XRect.html">XRect</A> __r, char *__frame)</B></TT>
+<DD>Draws a box using some specified characters for it's margins
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  box coordinates
+<BR><B>__frame</B> -  margins type, with the following contents:
+<p>__frame[0] - the upper-left corner character
+<p>__frame[1] - the upper horizontal line character
+<p>__frame[2] - the upper-right corner character
+<p>__frame[3] - the left vertical line character
+<p>__frame[4] - the right vertical line character
+<p>__frame[5] - the lower-left corner character
+<p>__frame[6] - the lower horizontal line character
+<p>__frame[7] - the lower-right corner character
+<p>Predefined values:
+<p><b>FS_SINGLEFRAME</b> - single-line frame
+<p><b>FS_DOUBLEFRAME</b> - double-line frame
+<p><b>FS_FULLFRAME</b> - full-filled frame<BR><DD></DL><P>
+<A NAME="FillWindow">
+<A NAME="DOC.39.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void FillWindow(<!1><A HREF="XRect.html">XRect</A> __r, chtype __c)</B></TT>
+<DD>Fills a area with a specified character
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  area to fill
+<BR><B>__c</B> -  desired filling character<BR><DD></DL><P>
+<A NAME="GetColor">
+<A NAME="DOC.39.26">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void GetColor(unsigned *__f, unsigned *__b)</B></TT>
+<DD>Gets the current foreground and background color, respectively
+<DL><DT><DD></DL><P>
+<A NAME="GetCursorPosition">
+<A NAME="DOC.39.27">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="XPoint.html">XPoint</A> GetCursorPosition()</B></TT>
+<DD>Returns the current cursor position
+<DL><DT><DD></DL><P>
+<A NAME="GetEvent">
+<A NAME="DOC.39.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="XEvent.html">XEvent</A>* GetEvent()</B></TT>
+<DD>Returns the first available event.
+This method have the following behaviour:
+<p>- if <i>TI_BLOCKING_INPUT</i> is set, the function waits until an event
+coming from keyboard or mouse arrise, and then returns it
+<p>- if <i>TI_BLOCKING_INPUT</i> is not set, the function returns the first
+available event coming from keyboard or mouse, if any. If nothing is
+available, the function returns zero
+<DL><DT><DD></DL><P>
+<A NAME="GetInputState">
+<A NAME="DOC.39.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   unsigned GetInputState(unsigned long __Mask)</B></TT>
+<DD>Returns the value of the terminal input state. The common used states are:
+<p><b>TI_BLOCKING_INPUT</b> indicates that <!1><A HREF="XTerminal.html#DOC.39.5">GetEvent</A> waits until an
+event from keyboard or mouse arrise
+<p><b>TI_USE_FUNCTION_KEYS</b> indicates that pressing the function keys will
+generate a keyboard event; this flag should normally be set
+<p><b>TI_INSERT_MODE</b> indicates that pressing a letter inserts it into
+the text being edited
+
+<DL><DT><DT><B>Returns:</B><DD>non-zero if bit set
+<DT><B>Parameters:</B><DD><B>__Mask</B> -  state mask
+<BR><DD></DL><P>
+<A NAME="GetInputTimeout">
+<A NAME="DOC.39.28">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   int GetInputTimeout()</B></TT>
+<DD>Returns the current timeout used for special codes receiving
+<DL><DT><DD></DL><P>
+<A NAME="GetName">
+<A NAME="DOC.39.29">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   char* GetName()</B></TT>
+<DD>Returns the current terminal's name
+<DL><DT><DD></DL><P>
+<A NAME="GetPalEntry">
+<A NAME="DOC.39.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   unsigned GetPalEntry(char *__Pal, unsigned __Len, unsigned __Index)</B></TT>
+<DD>Returns the correct palette entry
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Pal</B> -  object's palette
+<BR><B>__Len</B> -  object's palette length
+<BR><B>__Index</B> -  color position into the palette (1 = first)<BR><DD></DL><P>
+<A NAME="GetOutputState">
+<A NAME="DOC.39.8">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   unsigned GetOutputState(unsigned long __Mask)</B></TT>
+<DD>Returns the value of the terminal output state. The common used states:
+<p><b>TO_HAVE_COLORS</b> indicates that the terminal can display colors
+<p><b>TO_CURSOR_VISIBLE</b> indicates that the cursor is visible
+<p><b>TO_CURSOR_VERY_VISIBLE</b> indicates that the cursor is very visible
+
+<DL><DT><DT><B>Returns:</B><DD>non-zero if bit set
+<DT><B>Parameters:</B><DD><B>__Mask</B> -  state mask
+<BR><DD></DL><P>
+<A NAME="GetSize">
+<A NAME="DOC.39.30">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="XPoint.html">XPoint</A> GetSize()</B></TT>
+<DD>Returns the terminal's size
+<DL><DT><DD></DL><P>
+<A NAME="GetState">
+<A NAME="DOC.39.9">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool GetState(unsigned long __Mask)</B></TT>
+<DD>Returns the terminal general state. The common used states are:
+<p><b>TM_IS_PC_CONSOLE</b> indicates that the terminal is a PC console
+<p><b>TM_CAN_RESIZE</b> indicates that the terminal window can be resized
+<p><b>TM_HAVE_MOUSE</b> indicates that the terminal have mouse support
+<p><b>TM_HAVE_GPM_MOUSE</b> indicates that the GPM mouse support is activated
+
+<DL><DT><DT><B>Returns:</B><DD>true if bit set
+<DT><B>Parameters:</B><DD><B>__Mask</B> -  state mask
+<BR><DD></DL><P>
+<A NAME="GetWindow">
+<A NAME="DOC.39.10">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void GetWindow(<!1><A HREF="XRect.html">XRect</A> __r, chtype *__buff)</B></TT>
+<DD>Save the visual content of a specified area into a memory area.
+This method DOES NOT allocate memory space for the saved area content,
+instead it assumes that at least (__r.b.x - __r.a.x + 1) * (__r.b.y -
+__r.b.x + 1) * sizeof(chtype) bytes are already allocated
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  area to save
+<BR><B>__buff</B> -  pointer to the beggining of memory area<BR><DD></DL><P>
+<A NAME="IsValid">
+<A NAME="DOC.39.11">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool IsValid(<!1><A HREF="XPoint.html">XPoint</A> __p)</B></TT>
+<DD>Checks if a point have valid coordinates
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__p</B> -  point to check<BR><DD></DL><P>
+<A NAME="IsValid">
+<A NAME="DOC.39.12">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool IsValid(<!1><A HREF="XRect.html">XRect</A> __r)</B></TT>
+<DD>Checks if a rectangle have valid coordinates
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  rectangle to check<BR><DD></DL><P>
+<A NAME="MoveCursor">
+<A NAME="DOC.39.13">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void MoveCursor(<!1><A HREF="XPoint.html">XPoint</A> __p)</B></TT>
+<DD>Moves the cursor to a specified location
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__p</B> -  desired new cursor location<BR><DD></DL><P>
+<A NAME="Print">
+<A NAME="DOC.39.14">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Print(<!1><A HREF="XPoint.html">XPoint</A> __p, char *__fmt, ...)</B></TT>
+<DD>Prints something to the terminal. This function is analog to printf, and
+performs the output using a variable argument list
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__p</B> -  location to start<BR><DD></DL><P>
+<A NAME="PrintChar">
+<A NAME="DOC.39.15">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void PrintChar(<!1><A HREF="XPoint.html">XPoint</A> __p, chtype __c)</B></TT>
+<DD>Prints a single character to the terminal
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__p</B> -  location to start
+<BR><B>__c</B> -  character to output<BR><DD></DL><P>
+<A NAME="Refresh">
+<A NAME="DOC.39.16">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Refresh()</B></TT>
+<DD>Effectively dumps the current terminal contents to the screen.
+You must understand that all the output methods of <!1><A HREF="XTerminal.html#DOC.39.22">XTerminal</A>
+class does not implies screen actualization. The drawing is done only
+when calling this function
+<DL><DT><DD></DL><P>
+<A NAME="Resize">
+<A NAME="DOC.39.31">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Resize()</B></TT>
+<DD>Resizes the terminal using current values
+<DL><DT><DD></DL><P>
+<A NAME="Resume">
+<A NAME="DOC.39.32">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Resume()</B></TT>
+<DD>Restores a previous suspended terminal
+<DL><DT><DD></DL><P>
+<A NAME="PutWindow">
+<A NAME="DOC.39.17">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void PutWindow(<!1><A HREF="XRect.html">XRect</A> __r, chtype *__buff)</B></TT>
+<DD>Copies a previous saved screen area to the terminal
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  area to copy
+<BR><B>__buff</B> -  pointer to the beggining of memory area<BR><DD></DL><P>
+<A NAME="SetColor">
+<A NAME="DOC.39.18">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetColor(unsigned __f, unsigned __b)</B></TT>
+<DD>Sets the current terminal color. Different attributes can be ORed with
+the __f parameter
+<p><b>TA_UNDERLINE</b> underlining
+<p><b>TA_REVERSE</b> reverse video
+<p><b>TA_BLINK</b> blinking
+<p><b>TA_BOLD</b> extra bright
+<p><b>TA_HALF_BRIGHT</b> half bright
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__f</B> -  desired foreground color
+<BR><B>__b</B> -  desired background color<BR><DD></DL><P>
+<A NAME="SetInputState">
+<A NAME="DOC.39.19">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetInputState(unsigned long __Mask, bool __BoolValue)</B></TT>
+<DD>Sets the state of the specified terminal input state.
+Please see GetInputState() for details
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Mask</B> -  state mask
+<BR><B>__BoolValue</B> -  set bit if non-zero, otherwise clear it<BR><DD></DL><P>
+<A NAME="SetOutputState">
+<A NAME="DOC.39.20">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetOutputState(unsigned long __Mask, bool __BoolValue)</B></TT>
+<DD>Sets the state of the specified terminal output state.
+Please see GetOutputState() for details
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Mask</B> -  state mask
+<BR><B>__BoolValue</B> -  set bit if non-zero, otherwise clear it<BR><DD></DL><P>
+<A NAME="SetState">
+<A NAME="DOC.39.21">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetState(unsigned long __Mask, bool __BoolValue)</B></TT>
+<DD>Sets the state of the specified terminal general state.
+Please see GetState() for details
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Mask</B> -  state mask
+<BR><B>__BoolValue</B> -  set bit if non-zero, otherwise clear it<BR><DD></DL><P>
+<A NAME="Suspend">
+<A NAME="DOC.39.33">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Suspend()</B></TT>
+<DD>Saves the current terminal state and falls back to startup state
+<DL><DT><DD></DL><P>
+<A NAME="InputState">
+<A NAME="DOC.39.34">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned long InputState</B></TT>
+<DD>Current input, output and respectively general properties of the terminal
+<DL><DT><DD></DL><P>
+<A NAME="Cursor">
+<A NAME="DOC.39.35">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html">XPoint</A> Cursor</B></TT>
+<DD>Current cursor position
+<DL><DT><DD></DL><P>
+<A NAME="Size">
+<A NAME="DOC.39.36">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html">XPoint</A> Size</B></TT>
+<DD>Terminal size
+<DL><DT><DD></DL><P>
+<A NAME="Name">
+<A NAME="DOC.39.37">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>char* Name</B></TT>
+<DD>Terminal name
+<DL><DT><DD></DL><P>
+<A NAME="ForegroundColor">
+<A NAME="DOC.39.38">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned ForegroundColor</B></TT>
+<DD>Current foreground, respectively background color
+<DL><DT><DD></DL><P>
+<A NAME="UseFunctionKeys">
+<A NAME="DOC.39.39">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned UseFunctionKeys</B></TT>
+<DD>True if generating events on function keys pressing (normally set)
+<DL><DT><DD></DL><P>
+<A NAME="InputTimeout">
+<A NAME="DOC.39.40">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int InputTimeout</B></TT>
+<DD>Timeout for receiving special codes (e.g. for function keys)
+<DL><DT><DD></DL><P>
+<A NAME="EscTimeout">
+<A NAME="DOC.39.41">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int EscTimeout</B></TT>
+<DD>Timeout for receiving ESC codes
+<DL><DT><DD></DL><P>
+<A NAME="Init">
+<A NAME="DOC.39.42">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Init()</B></TT>
+<DD>Called by constructor
+<DL><DT><DD></DL><P>
+<A NAME="Done">
+<A NAME="DOC.39.43">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Done()</B></TT>
+<DD>Called by destructor
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998-2001 <a href="mailto:dragos@iname.com">Dragos Acostachioaie</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

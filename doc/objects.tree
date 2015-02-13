@@ -1,0 +1,47 @@
+Xterminal v1.0.x
+August 9, 2001
+objects.tree: Xterminal's Hierarchy
+Copyright (c) 1996-2001 Dragos Acostachioaie
+
+-+- RegionalInfo
+ +- XEvent
+ |    +- XKeyboardEvent
+ |    +- XMessage
+ |    +- XMouseEvent
+ +------------------------------- XEventBroker
+ +- XEventListener                  |
+ |    +- XObjectEventListener       |
+ |         |    +-------------------+
+ |         +- XObject
+ |              +- XtBackground
+ |              +- XtDesktop
+ |              |    +- XtApplication
+ |              +- XtButton
+ |              +- XtCheckButton
+ |              +- XtDialog
+ |                   +- XtDialogBox
+ |                   |    +- XtMessageBox
+ |                   |    +- XtTab
+ |                   +- XtTabDialog
+ |              +- XtHList
+ |              +- XtInputStringField
+ |              |    +- XtComboBox
+ |              |    +- XtInputNumericField
+ |              +- XtList
+ |              +- XtMenu
+ |              +- XtProgressBar
+ |              +- XtRadioButton
+ |              +- XtScrollBar
+ |              +- XtStaticText
+ |              |    +- XtContextualHelp
+ |              +- XtStatusLine
+ |              +- XtWindow
+ |                   +- XtTextEditor
+ |                   +- XtTextViewer
+ +- XPoint
+ +- XRect
+ +- XTerminal
+
+
+`*': class is not yet defined
+`\': class is under development

@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XEventBroker</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.3.17-pre4">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>class  <A HREF="#DOC.DOCU">XEventBroker</A></H2>
+<BLOCKQUOTE>Event listener registration</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<H3>XEventBroker
+</H3>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.9.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <B>~XEventBroker</B>()
+<DD><I>Destructs the object's instance</I>
+<DT>
+<A HREF="#DOC.9.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>AddListener</B>(unsigned long __Listener, unsigned __Class)
+<DD><I>Registers an event listener for the specified event class.</I>
+<DT>
+<A HREF="#DOC.9.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>DelListener</B>(unsigned long __Listener, unsigned __Class)
+<DD><I>Removes the event listener for the specified event class.</I>
+<DT>
+<A HREF="#DOC.9.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>DelListener</B>(unsigned long __Listener)
+<DD><I>Removes the specified event listener for all event classes.</I>
+<DT>
+<A HREF="#DOC.9.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>HandleEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DD><I>Handles an incoming event and distributes it to all registered listeners.</I>
+<DT>
+<A HREF="#DOC.9.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, long __Message)
+<DD><I>Sends a "long" message.</I>
+<DT>
+<A HREF="#DOC.9.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size)
+<DD><I>Sends a "void *" message.</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<A HREF="#DOC.9.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>Map <B>__map</B>
+<DD><I>map for binding listeners to events</I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Event listener registration</BLOCKQUOTE>
+<DL>
+
+<A NAME="~XEventBroker">
+<A NAME="DOC.9.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~XEventBroker()</B></TT>
+<DD>Destructs the object's instance
+<DL><DT><DD></DL><P>
+<A NAME="AddListener">
+<A NAME="DOC.9.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void AddListener(unsigned long __Listener, unsigned __Class)</B></TT>
+<DD>Registers an event listener for the specified event class.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Listener</B> -  object id of listener 
+<BR><B>__Class</B> -  event class<BR><DD></DL><P>
+<A NAME="DelListener">
+<A NAME="DOC.9.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void DelListener(unsigned long __Listener, unsigned __Class)</B></TT>
+<DD>Removes the event listener for the specified event class.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Listener</B> -  object id of listener 
+<BR><B>__Class</B> -  event class<BR><DD></DL><P>
+<A NAME="DelListener">
+<A NAME="DOC.9.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void DelListener(unsigned long __Listener)</B></TT>
+<DD>Removes the specified event listener for all event classes.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Listener</B> -  object id of listener<BR><DD></DL><P>
+<A NAME="HandleEvent">
+<A NAME="DOC.9.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void HandleEvent(<!1><A HREF="XEvent.html">XEvent</A> *__Event)</B></TT>
+<DD>Handles an incoming event and distributes it to all registered listeners.
+<DL><DT><DD></DL><P>
+<A NAME="SendMessage">
+<A NAME="DOC.9.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool SendMessage(unsigned long __Receiver, unsigned long __Class, long __Message)</B></TT>
+<DD>Sends a "long" message.
+
+<DL><DT><DT><B>Returns:</B><DD>false if receiver does not exist
+<DT><B>Parameters:</B><DD><B>__Receiver</B> -  destination object id
+<BR><B>__Class</B> -  message class
+<BR><B>__Message</B> -  the message itself 
+<BR><DD></DL><P>
+<A NAME="SendMessage">
+<A NAME="DOC.9.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool SendMessage(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size)</B></TT>
+<DD>Sends a "void *" message.
+
+<DL><DT><DT><B>Returns:</B><DD>false if receiver does not exist 
+<DT><B>Parameters:</B><DD><B>__Receiver</B> -  destination object id
+<BR><B>__Class</B> -  message class
+<BR><B>__Body</B> -  the message itself
+<BR><B>__Size</B> -  size of __Body pointer
+<BR><DD></DL><P>
+<A NAME="__map">
+<A NAME="DOC.9.8">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>Map __map</B></TT>
+<DD>map for binding listeners to events
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="XObject.html">XObject</A><BR>
+</DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998 <a href="mailto:slice@t-online.de">Bernd Kalbfuss</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

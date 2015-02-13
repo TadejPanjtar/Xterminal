@@ -1,0 +1,296 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XtComboBox</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.3">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">XtComboBox</A>: public <!1><A HREF="XtInputStringField.html#DOC.26.1">XtInputStringField</A></H2>
+<BLOCKQUOTE>ComboBox control</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<H3>XtComboBox
+- <A HREF="XtInputStringField.html">XtInputStringField</A>
+- <A HREF="XObject.html">XObject</A>
+- <A HREF="XEventBroker.html">XEventBroker</A>
+</H3>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.21.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XtComboBox</B>(<!1><A HREF="XRect.html">XRect</A> __r, LItem *__Items, short __Rows)
+<DD><I>Constructs a new XtComboBox.</I>
+<DT>
+<A HREF="#DOC.21.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <B>~XtComboBox</B>()
+<DD><I>Destructs the object's instance</I>
+<DT>
+<A HREF="#DOC.21.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>AddFirst</B>(const char *__Text, long __Value, short __Flags)
+<DD><I>Add LItem at top of the list</I>
+<DT>
+<A HREF="#DOC.21.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>AddFirst</B>(const char *__Text)
+<DD><I>Add LItem at top of the list</I>
+<DT>
+<A HREF="#DOC.21.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>AddLast</B>(const char *__Text, long __Value, short __Flags)
+<DD><I>Add LItem at end of the list</I>
+<DT>
+<A HREF="#DOC.21.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>AddLast</B>(const char *__Text)
+<DD><I>Add LItem at end of the list</I>
+<DT>
+<A HREF="#DOC.21.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>DeleteItem</B>(unsigned long __Item)
+<DD><I>Deletes the specified item number </I>
+<DT>
+<A HREF="#DOC.21.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Draw</B>()
+<DD><I>Draws the object</I>
+<DT>
+<A HREF="#DOC.21.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>InsertItem</B>(unsigned long __Position, LItem *__Item)
+<DD><I>Insert the item as defined position</I>
+<DT>
+<A HREF="#DOC.21.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessKeyboardEvent</B>(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)
+<DD><I>Process keyboard events</I>
+<DT>
+<A HREF="#DOC.21.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetKey</B>(long __Key)
+<DD><I>Sets the current value of field corresponding with key from item list</I>
+<DT>
+<A HREF="#DOC.21.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetValue</B>(char *__DefaultString)
+<DD><I>Sets the current value of field</I>
+<DT>
+<A HREF="#DOC.21.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetValue</B>(LItem *__Items)
+<DD><I>Sets a new list content</I>
+<DT>
+<A HREF="#DOC.21.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   long <B>GetKey</B>()
+<DD><I>Returns the key of current item</I>
+<DT>
+<A HREF="#DOC.21.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   LItem* <B>GetList</B>()
+<DD><I>Returns the list content</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XtInputStringField.html">XtInputStringField</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>ClearValue</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   const char* <B>GetDefaultValue</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   short <B>GetInputLength</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   const char* <B>GetValue</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessMessage</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessMouseEvent</B>(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetState</B>(unsigned long __Mask, bool __BoolValue)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObject.html">XObject</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>CalculateBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>GetBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   <!1><A HREF="XEvent.html">XEvent</A>* <B>GetEvent</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetId</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char* <B>GetObjClass</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetOrigin</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   char* <B>GetPalette</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   unsigned <B>GetPalEntry</B>(unsigned __Index)
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetSize</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetState</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>GetState</B>(unsigned long __Mask)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>HandleEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>MoveTo</B>(<!1><A HREF="XPoint.html">XPoint</A> __p)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>RegisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>Resize</B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetPalette</B>(char *__Pal, unsigned __PalLen)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>UnregisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>Id</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>State</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Origin</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Size</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Cursor</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>Bounds</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>ObjClass</B>[40]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>Pal</B>[80]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned <B>PalLen</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XObject.html#DOC.14.14">XObject</A>* <B>Server</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>ClientList <B>Clients</B>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, long __Message)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventBroker.html">XEventBroker</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>AddListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>Map <B>__map</B>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObjectEventListener.html">XObjectEventListener</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessCommand</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessSignal</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessBroadcast</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventListener.html">XEventListener</A>:</H3>
+<DL>
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>ComboBox control</BLOCKQUOTE>
+<DL>
+
+<A NAME="XtComboBox">
+<A NAME="DOC.21.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XtComboBox(<!1><A HREF="XRect.html">XRect</A> __r, LItem *__Items, short __Rows)</B></TT>
+<DD>Constructs a new XtComboBox.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  field bounds
+<BR><B>__Items</B> -  selectable list of items
+<BR><B>__Rows</B> -  maximum visible rows at list<BR><DD></DL><P>
+<A NAME="~XtComboBox">
+<A NAME="DOC.21.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~XtComboBox()</B></TT>
+<DD>Destructs the object's instance
+<DL><DT><DD></DL><P>
+<A NAME="AddFirst">
+<A NAME="DOC.21.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void AddFirst(const char *__Text, long __Value, short __Flags)</B></TT>
+<DD>Add LItem at top of the list
+<DL><DT><DD></DL><P>
+<A NAME="AddFirst">
+<A NAME="DOC.21.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void AddFirst(const char *__Text)</B></TT>
+<DD>Add LItem at top of the list
+<DL><DT><DD></DL><P>
+<A NAME="AddLast">
+<A NAME="DOC.21.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void AddLast(const char *__Text, long __Value, short __Flags)</B></TT>
+<DD>Add LItem at end of the list
+<DL><DT><DD></DL><P>
+<A NAME="AddLast">
+<A NAME="DOC.21.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void AddLast(const char *__Text)</B></TT>
+<DD>Add LItem at end of the list
+<DL><DT><DD></DL><P>
+<A NAME="DeleteItem">
+<A NAME="DOC.21.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool DeleteItem(unsigned long __Item)</B></TT>
+<DD>Deletes the specified item number
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__Item</B> -  item number<BR><DD></DL><P>
+<A NAME="Draw">
+<A NAME="DOC.21.8">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Draw()</B></TT>
+<DD>Draws the object
+<DL><DT><DD></DL><P>
+<A NAME="InsertItem">
+<A NAME="DOC.21.9">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool InsertItem(unsigned long __Position, LItem *__Item)</B></TT>
+<DD>Insert the item as defined position
+<DL><DT><DD></DL><P>
+<A NAME="ProcessKeyboardEvent">
+<A NAME="DOC.21.10">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessKeyboardEvent(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)</B></TT>
+<DD>Process keyboard events
+<DL><DT><DD></DL><P>
+<A NAME="SetKey">
+<A NAME="DOC.21.11">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetKey(long __Key)</B></TT>
+<DD>Sets the current value of field corresponding with key from item list
+<DL><DT><DD></DL><P>
+<A NAME="SetValue">
+<A NAME="DOC.21.12">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetValue(char *__DefaultString)</B></TT>
+<DD>Sets the current value of field
+<DL><DT><DD></DL><P>
+<A NAME="SetValue">
+<A NAME="DOC.21.13">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetValue(LItem *__Items)</B></TT>
+<DD>Sets a new list content
+<DL><DT><DD></DL><P>
+<A NAME="GetKey">
+<A NAME="DOC.21.14">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   long GetKey()</B></TT>
+<DD>Returns the key of current item
+<DL><DT><DD></DL><P>
+<A NAME="GetList">
+<A NAME="DOC.21.15">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   LItem* GetList()</B></TT>
+<DD>Returns the list content
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;2000 <a href="mailto:pavel@collage.etel.ru">Pavel Andreew</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

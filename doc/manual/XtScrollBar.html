@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XtScrollBar</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.3.17-pre4">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>class  <A HREF="#DOC.DOCU">XtScrollBar</A>: public <!1><A HREF="XObject.html#DOC.14.14">XObject</A></H2>
+<BLOCKQUOTE>Scroll bar</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<H3>XtScrollBar
+- <A HREF="XObject.html">XObject</A>
+- <A HREF="XEventBroker.html">XEventBroker</A>
+</H3>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.16.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XtScrollBar</B>(<!1><A HREF="XRect.html">XRect</A> __r, unsigned long __TotalNo, unsigned long __Flags)
+<DD><I>Constructs a new XtScrollBar </I>
+<DT>
+<A HREF="#DOC.16.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>Draw</B>()
+<DD><I>Draws the object</I>
+<DT>
+<A HREF="#DOC.16.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   unsigned long <B>GetTotalNo</B>()
+<DD><I>Returns the total items number</I>
+<DT>
+<A HREF="#DOC.16.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool <B>ProcessMouseEvent</B>(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)
+<DD><I>Process mouse events</I>
+<DT>
+<A HREF="#DOC.16.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetTotalNo</B>(unsigned long __ItemNo)
+<DD><I>Change the total items number</I>
+<DT>
+<A HREF="#DOC.16.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void <B>SetValue</B>(unsigned long __ItemNo)
+<DD><I>Change the current item number</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObject.html">XObject</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>CalculateBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>GetBounds</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   <!1><A HREF="XEvent.html">XEvent</A>* <B>GetEvent</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetId</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char* <B>GetObjClass</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetOrigin</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   char* <B>GetPalette</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   unsigned <B>GetPalEntry</B>(unsigned __Index)
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>GetSize</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>GetState</B>()
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>GetState</B>(unsigned long __Mask)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>HandleEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>MoveTo</B>(<!1><A HREF="XPoint.html">XPoint</A> __p)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessEvent</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>RegisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>Resize</B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetPalette</B>(char *__Pal, unsigned __PalLen)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>SetState</B>(unsigned long __Mask, bool __BoolValue)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>UnregisterClient</B>(<!1><A HREF="XObject.html#DOC.14.14">XObject</A> *__Client)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>Id</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned long <B>State</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Origin</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Size</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XPoint.html">XPoint</A> <B>Cursor</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XRect.html">XRect</A> <B>Bounds</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>ObjClass</B>[40]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>char <B>Pal</B>[80]
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned <B>PalLen</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="XObject.html#DOC.14.14">XObject</A>* <B>Server</B>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>ClientList <B>Clients</B>
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, long __Message)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>bool <B>SendMessage</B>(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventBroker.html">XEventBroker</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>AddListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener, unsigned __Class)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>DelListener</B>(unsigned long __Listener)
+</DL></P>
+
+<P><DL>
+<DT><H3>Protected Fields</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>Map <B>__map</B>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XObjectEventListener.html">XObjectEventListener</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessKeyboardEvent</B>(<!1><A HREF="XKeyboardEvent.html">XKeyboardEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessMessage</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessCommand</B>(<!1><A HREF="XMessage.html">XMessage</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessSignal</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>ProcessBroadcast</B>(<!1><A HREF="XEvent.html">XEvent</A> *__Event)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="XEventListener.html">XEventListener</A>:</H3>
+<DL>
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Scroll bar</BLOCKQUOTE>
+<DL>
+
+<A NAME="XtScrollBar">
+<A NAME="DOC.16.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XtScrollBar(<!1><A HREF="XRect.html">XRect</A> __r, unsigned long __TotalNo, unsigned long __Flags)</B></TT>
+<DD>Constructs a new XtScrollBar
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  bar bounds
+<BR><B>__TotalNo</B> -  total items number
+<BR><B>__</B> -  Flags options, which can be:
+<p><b>SB_HORIZONTAL</b> scroll bar is horizontally positioned
+<p><b>SB_INDICATE_PERCENT</b> scroll bar indicates what percent of
+total items are being viewed. By default, the scroll bar indicates
+the current item number.<BR><DD></DL><P>
+<A NAME="Draw">
+<A NAME="DOC.16.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void Draw()</B></TT>
+<DD>Draws the object
+<DL><DT><DD></DL><P>
+<A NAME="GetTotalNo">
+<A NAME="DOC.16.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   unsigned long GetTotalNo()</B></TT>
+<DD>Returns the total items number
+<DL><DT><DD></DL><P>
+<A NAME="ProcessMouseEvent">
+<A NAME="DOC.16.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool ProcessMouseEvent(<!1><A HREF="XMouseEvent.html">XMouseEvent</A> *__Event)</B></TT>
+<DD>Process mouse events
+<DL><DT><DD></DL><P>
+<A NAME="SetTotalNo">
+<A NAME="DOC.16.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetTotalNo(unsigned long __ItemNo)</B></TT>
+<DD>Change the total items number
+<DL><DT><DD></DL><P>
+<A NAME="SetValue">
+<A NAME="DOC.16.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void SetValue(unsigned long __ItemNo)</B></TT>
+<DD>Change the current item number
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998-2001 <a href="mailto:dragos@iname.com">Dragos Acostachioaie</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

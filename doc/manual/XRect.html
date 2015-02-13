@@ -1,0 +1,227 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XRect</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.3.17-pre4">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>class  <A HREF="#DOC.DOCU">XRect</A></H2>
+<BLOCKQUOTE>Geometrical two-dimensional rectangle</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Fields</H3><DD><DT>
+<A HREF="#DOC.4.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html">XPoint</A> <B>a</B>
+<DD><I>Upper left corner</I>
+<DT>
+<A HREF="#DOC.4.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html">XPoint</A> <B>b</B>
+<DD><I>Lower right corner</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.4.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XRect</B>()
+<DD><I>Constructs a clean rectangle with the corners a(0, 0), b(0, 0)</I>
+<DT>
+<A HREF="#DOC.4.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XRect</B>(unsigned __xa, unsigned __ya, unsigned __xb, unsigned __yb)
+<DD><I>Constructs a new point with the corners a(__xa, __ya), b(__xb, __yb) </I>
+<DT>
+<A HREF="#DOC.4.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XRect</B>(<!1><A HREF="XPoint.html">XPoint</A> __a, <!1><A HREF="XPoint.html">XPoint</A> __b)
+<DD><I>Constructs a new point with the specified corners </I>
+<DT>
+<A HREF="#DOC.4.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void <B>Assign</B>(<!1><A HREF="XPoint.html">XPoint</A> __a, <!1><A HREF="XPoint.html">XPoint</A> __b)
+<DD><I>Assigns the specified corners to the rectangle </I>
+<DT>
+<A HREF="#DOC.4.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void <B>Assign</B>(unsigned __xa, unsigned __ya, unsigned __xb, unsigned __yb)
+<DD><I>Assigns the specified coordinates to the rectangle </I>
+<DT>
+<A HREF="#DOC.4.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void <B>Move</B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DD><I>Moves the rectangle relatively by the specified coordinates </I>
+<DT>
+<A HREF="#DOC.4.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void <B>Grow</B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DD><I>Grows the rectangle by adjusting the lower-right corner with the specified coordinates </I>
+<DT>
+<A HREF="#DOC.4.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void <B>Intersect</B>(<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)
+<DD><I>Assigns the rectangle the intersection with another rectangle </I>
+<DT>
+<A HREF="#DOC.4.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>IsValid</B>()
+<DD><I>Checks if the coordinates can form a rectangle </I>
+<DT>
+<A HREF="#DOC.4.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void <B>Union</B>(<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)
+<DD><I>Assigns the rectangle the union with another rectangle </I>
+<DT>
+<A HREF="#DOC.4.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>Contains</B>(<!1><A HREF="XPoint.html">XPoint</A> __p)
+<DD><I>Returns true if the rectangle contains the specified point </I>
+<DT>
+<A HREF="#DOC.4.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XRect.html#DOC.4.18">XRect</A>& <B>operator = </B>(<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)
+<DD><I>Assigns the rectangle the corners of the specified rectangle </I>
+<DT>
+<A HREF="#DOC.4.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>operator == </B>(<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)
+<DD><I>Compares to rectangles and returns true if they are equal </I>
+<DT>
+<A HREF="#DOC.4.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>operator != </B>(<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)
+<DD><I>Compares to rectangles and returns false if they are equal </I>
+<DT>
+<A HREF="#DOC.4.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XRect.html#DOC.4.18">XRect</A>& <B>operator += </B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DD><I>Positively translates the rectangle by adjusting the lower-right corner with the specified coordinates </I>
+<DT>
+<A HREF="#DOC.4.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XRect.html#DOC.4.18">XRect</A>& <B>operator -= </B>(<!1><A HREF="XPoint.html">XPoint</A> __delta)
+<DD><I>Negatively translates the rectangle by adjusting the lower-right corner with the specified coordinates </I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>The XRect class is the two dimensional representation of a geometrical
+rectangle with the upper left corner a and the lower left corner b.
+Methods to assign corners and operators for mathematical calculation
+are included.
+
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="a">
+<A NAME="DOC.4.16">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html">XPoint</A> a</B></TT>
+<DD>Upper left corner
+<DL><DT><DD></DL><P>
+<A NAME="b">
+<A NAME="DOC.4.17">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html">XPoint</A> b</B></TT>
+<DD>Lower right corner
+<DL><DT><DD></DL><P>
+<A NAME="XRect">
+<A NAME="DOC.4.18">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XRect()</B></TT>
+<DD>Constructs a clean rectangle with the corners a(0, 0), b(0, 0)
+<DL><DT><DD></DL><P>
+<A NAME="XRect">
+<A NAME="DOC.4.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XRect(unsigned __xa, unsigned __ya, unsigned __xb, unsigned __yb)</B></TT>
+<DD>Constructs a new point with the corners a(__xa, __ya), b(__xb, __yb)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__xa</B> -  x and
+<BR><B>__ya</B> -  y coordinate of upper left corner
+<BR><B>__xb</B> -  x and
+<BR><B>__yb</B> -  y coordinate of lower right corner<BR><DD></DL><P>
+<A NAME="XRect">
+<A NAME="DOC.4.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XRect(<!1><A HREF="XPoint.html">XPoint</A> __a, <!1><A HREF="XPoint.html">XPoint</A> __b)</B></TT>
+<DD>Constructs a new point with the specified corners
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__a</B> -  upper left corner
+<BR><B>__b</B> -  lower right corner<BR><DD></DL><P>
+<A NAME="Assign">
+<A NAME="DOC.4.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void Assign(<!1><A HREF="XPoint.html">XPoint</A> __a, <!1><A HREF="XPoint.html">XPoint</A> __b)</B></TT>
+<DD>Assigns the specified corners to the rectangle
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__a</B> -  upper left corner
+<BR><B>__b</B> -  lower right corner<BR><DD></DL><P>
+<A NAME="Assign">
+<A NAME="DOC.4.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void Assign(unsigned __xa, unsigned __ya, unsigned __xb, unsigned __yb)</B></TT>
+<DD>Assigns the specified coordinates to the rectangle
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__xa</B> -  x and
+<BR><B>__ya</B> -  y coordinate of upper left corner
+<BR><B>__xb</B> -  x and
+<BR><B>__yb</B> -  y coordinate of lower right corner<BR><DD></DL><P>
+<A NAME="Move">
+<A NAME="DOC.4.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void Move(<!1><A HREF="XPoint.html">XPoint</A> __delta)</B></TT>
+<DD>Moves the rectangle relatively by the specified coordinates
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__delta</B> -  translation vector<BR><DD></DL><P>
+<A NAME="Grow">
+<A NAME="DOC.4.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void Grow(<!1><A HREF="XPoint.html">XPoint</A> __delta)</B></TT>
+<DD>Grows the rectangle by adjusting the lower-right corner with the
+specified coordinates
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__delta</B> -  translation vector<BR><DD></DL><P>
+<A NAME="Intersect">
+<A NAME="DOC.4.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void Intersect(<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)</B></TT>
+<DD>Assigns the rectangle the intersection with another rectangle
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  other rectangle<BR><DD></DL><P>
+<A NAME="IsValid">
+<A NAME="DOC.4.8">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool IsValid()</B></TT>
+<DD>Checks if the coordinates can form a rectangle
+
+<DL><DT><DT><B>Parameters:</B><DD><B>true</B> -  if coordinates are valid<BR><DD></DL><P>
+<A NAME="Union">
+<A NAME="DOC.4.9">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void Union(<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)</B></TT>
+<DD>Assigns the rectangle the union with another rectangle
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__r</B> -  other rectangle<BR><DD></DL><P>
+<A NAME="Contains">
+<A NAME="DOC.4.10">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool Contains(<!1><A HREF="XPoint.html">XPoint</A> __p)</B></TT>
+<DD>Returns true if the rectangle contains the specified point
+
+<DL><DT><DT><B>Returns:</B><DD>true if point in rectangle
+<DT><B>Parameters:</B><DD><B>__p</B> -  point
+<BR><DD></DL><P>
+<A NAME="operator = ">
+<A NAME="DOC.4.11">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XRect.html#DOC.4.18">XRect</A>& operator = (<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)</B></TT>
+<DD>Assigns the rectangle the corners of the specified rectangle
+
+<DL><DT><DT><B>Returns:</B><DD>assigned rectangle
+<DT><B>Parameters:</B><DD><B>__r</B> -  value to assign
+<BR><DD></DL><P>
+<A NAME="operator == ">
+<A NAME="DOC.4.12">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator == (<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)</B></TT>
+<DD>Compares to rectangles and returns true if they are equal
+
+<DL><DT><DT><B>Returns:</B><DD>true if equal
+<DT><B>Parameters:</B><DD><B>__r</B> -  right operand
+<BR><DD></DL><P>
+<A NAME="operator != ">
+<A NAME="DOC.4.13">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator != (<!1><A HREF="XRect.html#DOC.4.18">XRect</A> __r)</B></TT>
+<DD>Compares to rectangles and returns false if they are equal
+
+<DL><DT><DT><B>Returns:</B><DD>false if equal
+<DT><B>Parameters:</B><DD><B>__r</B> -  right operand
+<BR><DD></DL><P>
+<A NAME="operator += ">
+<A NAME="DOC.4.14">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XRect.html#DOC.4.18">XRect</A>& operator += (<!1><A HREF="XPoint.html">XPoint</A> __delta)</B></TT>
+<DD>Positively translates the rectangle by adjusting the lower-right
+corner with the specified coordinates
+
+<DL><DT><DT><B>Returns:</B><DD>translated rectangle
+<DT><B>Parameters:</B><DD><B>__delta</B> -  translation vector
+<BR><DD></DL><P>
+<A NAME="operator -= ">
+<A NAME="DOC.4.15">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XRect.html#DOC.4.18">XRect</A>& operator -= (<!1><A HREF="XPoint.html">XPoint</A> __delta)</B></TT>
+<DD>Negatively translates the rectangle by adjusting the lower-right
+corner with the specified coordinates
+
+<DL><DT><DT><B>Returns:</B><DD>translated rectangle
+<DT><B>Parameters:</B><DD><B>__delta</B> -  translation vector
+<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998 <a href="mailto:slice@t-online.de">Bernd Kalbfuss</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

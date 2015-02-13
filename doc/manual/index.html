@@ -1,0 +1,187 @@
+<html>
+
+<head><title>Xterminal Programmer's Manual</title></head>
+<body bgcolor="#ffffff" text="#000000" link="#000080" alink="#c00000" vlink="#404040">
+
+<table width="100%" cellspacing=0 border=0 cellpadding=4>
+<tr valign=top bgcolor="#80c080">
+<td>
+<a href="http://xterminal.sourceforge.net">Xterminal Home Page</a>
+<td align=right>
+<a href="classes.html">Class index</a>
+&#183; <a href="functions.html">Functions</a>
+&#183; <a href="hierarchy.html">Class hierarchy</a>
+</table>
+
+<p><center><b><font size=+4>Xterminal Programmer's Manual</font></b></center></p>
+
+<li><a href="#description">Description</a><br>
+<li><a href="#installation">Installation procedures</a><br>
+<li><a href="#foundation">The foundation class: XObject</a><br>
+<li><a href="#geometry">The geometrical classes: XPoint and XRect</a><br>
+<li><a href="#event">Events: XEvent, XKeyboardEvent, XMouseEvent, XMessage</a><br>
+<li><a href="#terminal">Accessing the terminal: XTerminal class</a><br>
+<li><a href="#library">Using the library</a><br>
+<li><a href="hierarchy.html">Classes hierarchy</a><br>
+
+<p>
+<h2><a name="description">Description</a></h2>
+
+   <dd>First of all, Xterminal is a hierarchy of objects, based on a client-
+server model. That means there is one or more objects acting like servers, each
+one having some clients. Each of these clients may act as servers too, having
+each one some clients. The various events that comes from the system (keyboard,
+mouse events, signals, messages, and so on) are going to a server and he
+decide which of his clients must receive the event, and so forth. If a server
+is redrawn, he asks it's clients to redraw themselves, too, for example. Events
+are not passed syncronous to objects, but using a queue, so if the system is
+busy with other tasks, events are not loosed.<br>
+   <dd>Each object have an unique identificator, and Xterminal maintains an
+internal table to keep track of these objects. Objects can communicate one
+with other using messages. Messages are translated into events and inserted
+into the queue, too.<br>
+</p><br>
+
+<p>
+<h2><a name="instalattion">Installation procedures</a></h2>
+
+<li>The steps in order to compile the package<br>
+  <dd><b>1.</b> `cd' to the directory containing the package's source code and
+     type `./configure' to configure the package for your system. If you're
+     using `csh' on an old version of System V, you might need to type
+     `sh ./configure' instead to prevent `csh' from trying to execute
+     `configure' itself.<br><br>
+
+     Running `configure' takes awhile. While running, it prints some messages
+     telling which features it is checking for.<br><br>
+
+     The `configure' script is generated from `configure.in' by GNU's autoconf
+     and it attempts to guess correct values for various system-dependent
+     variables used during compilation. It also creates the Makefiles needed to
+     compile the package and a `.h' file containing system-dependent
+     definitions;<br><br>
+
+  <dd><b>2.</b> Type `make' to compile the package;<br><br>
+
+  <dd><b>3.</b> Type `make install' to install the library, the header files and
+     the documentation. This operation should be done as root;<br><br>
+
+  <dd><b>4.</b> Type `make examples' if you wish to see some test programs. This
+     will create some `ex*' files in the `example' directory;<br><br>
+
+  <dd><b>5.</b> You can remove the library and object files from the source
+     directory by typing `make clean'. To also remove the files that
+     `configure' created (so you can compile the package for a different kind of
+     system), type `make distclean';<br><br>
+
+  <dd><b>6.</b> Type `make uninstall' to remove the library, the header files
+     and the documentation from the destionation directories.
+
+<br>
+<li>Installation directories<br>
+   <dd>By default, `make install' will install the package's files in
+`/usr/include', `/usr/lib', etc. You can specify an installation prefix
+other than `/usr' by giving `configure' the option `--prefix=PATH'.<br><br>
+
+<li>Other features and options<br>
+   <dd>If you want to compile a static version of the library instead of a
+shared one, you should use the option `--disable-shared'.<br>
+   <dd>If you don't want mouse support, use the option `--without-gpm'.<br>
+   <dd>For other options, type `./configure --help'.
+</p><br>
+
+<p>
+<h2><a name="foundation">The foundation class: XObject</a></h2>
+
+   <dd>Every class is derived from an abstract class, <i>XObject</i>. Each
+instantiated XObject have an <i>object id</i> (identificator) associated to
+it. The library itself maintains an internal table of instantiated classes.
+There are three types of objects:<br>
+- <i>abstract objects</i>, which cannot be instantiated, but only declared;
+their purpose is to provide a general manipulation to a class of objects;<br>
+- <i>passive objects</i>, which only displays something, but the user cannot
+control them;<br>
+- <i>active objects</i>, which the user can do something with them, and which
+knows to answer in a way to the user input.<br><br>
+
+<dd>Learn more about <a href="XObject.html">XObject</a>.<br><br>
+
+<p>
+<h2><a name="geometry">The geometrical classes: XPoint and XRect</a></h2>
+
+   <dd><i>XPoint</i> is an abstraction for a geometrical two-dimensional
+"point", having an <i>x</i> field (horizontal coordinate) and an <i>y</i> field
+(vertical coordinate).<br><br>
+
+<dd>Learn more about <a href="XPoint.html">XPoint</a>.<br><br>
+
+   <dd><i>XRect</i> is an abstraction for a geometrical two-dimensional
+"rectangle", having an <i>a</i> field of type <a href="XPoint.html">XPoint</a>
+(the upper-left corner), and an <i>b</i> field of type <a href="XPoint.html">
+XPoint</a> too (the bottom-right corner).<br><br>
+
+<dd>Learn more about <a href="XRect.html">XRect</a>.<br><br>
+
+</p><br>
+
+<p>
+<h2><a name="event">Events</a></h2>
+
+   <dd>The events are not passed syncronously to the objects to which are
+addressed, but using a event queue. That doesn't mean the events will be
+delayed, anyway. The application will automatically query the system for
+events (from keyboard, from mouse, messages from other objects, UNIX
+signals), will find the object that event is addressed to, and will insert
+them into the queue.<br>
+    <dd>There is a basic event class, <i>XEvent</i>, and the other event classes
+are derived from it.<br><br>
+
+<li>Event "classes":<br>
+   <dd>- EV_NOTHING, no event for an object;<br>
+   <dd>- EV_KEYBOARD, an event from keyboard;<br>
+   <dd>- EV_MOUSE, an event from mouse;<br>
+   <dd>- EV_SIGNAL, a UNIX system signal;<br>
+   <dd>- EV_MESSAGE, a message from an other object;<br>
+   <dd>- EV_BROADCAST, an event received by all objects.<br><br>
+
+   <dd>The Xterminal's event model is suggested by the picture below:<br><br>
+
+<center><img src="event_model.jpg" alt="[Xterminal's Event Model]" align=center></center><br><br>
+
+<dd>Learn more about <a href="XEvent.html">XEvent</a>.
+</p>
+
+<p>
+<h2><a name="terminal">Accessing the terminal</a></h2>
+   <dd>The terminal is accessed using the XTerminal class, which abstractize
+the input/output operations with the terminal. This class is globally
+instantiated as <i>XTerminal *Terminal</i>. This class allows you to control the
+terminal input/output state, and provides methods to write to the terminal and
+to get events (from keyboard or mouse) from it. Always remember that writing
+something to the terminal does not imply screen update; the update is made only
+at the XTerminal.Refresh() call.<br><br>
+
+<dd>Learn more about <a href="XTerminal.html">XTerminal</a>.<br><br>
+</p>
+
+<p>
+<h2><a name="library">Using the library</a></h2>
+
+   <dd>In order to use the library, you must include Xterminal.h in your C++
+programs. At the linking phase, you must have -lXterminal as parameter when
+calling the C++ compiler. You may also need to use -lncurses -lgpm.<br>
+   <dd>Any Xterminal application must first call <a href="functions.html#XInit">
+XInit()</a> that initialize the terminal. The program also must call
+<a href="functions.html#XDone">XDone()</a> before exit.<br><br>
+
+   <dd>Learn more about using Xterminal:<br>
+   <dd><a href="classes.html">Alphabetical list of classes</a><br>
+   <dd><a href="functions.html">Functions</a><br>
+   <dd><a href="hierarchy.html">Classes hierarchy</a><br><br>
+</p>
+
+<br><hr>
+Copyright &copy;1997-2001 <a href="mailto:dragos@iname.com">Dragos Acostachioaie</a><br>
+Last update on October 27, 2001
+
+</html>

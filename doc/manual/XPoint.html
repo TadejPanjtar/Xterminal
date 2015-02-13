@@ -1,0 +1,217 @@
+<HTML>
+<HEAD>
+   <TITLE>class  XPoint</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.3.17-pre4">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H2>class  <A HREF="#DOC.DOCU">XPoint</A></H2>
+<BLOCKQUOTE>Geometrical two-dimensional point</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Fields</H3><DD><DT>
+<A HREF="#DOC.3.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned <B>x</B>
+<DD><I>X coordinate of the point</I>
+<DT>
+<A HREF="#DOC.3.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned <B>y</B>
+<DD><I>Y coordinate of the point</I>
+</DL></P>
+
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<A HREF="#DOC.3.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XPoint</B>()
+<DD><I>Constructs a clean point with the coordinates (0, 0)</I>
+<DT>
+<A HREF="#DOC.3.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> <B>XPoint</B>(unsigned __x, unsigned __y)
+<DD><I>Constructs a new point with the coordinates (__x, __y) </I>
+<DT>
+<A HREF="#DOC.3.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void <B>Assign</B>(unsigned __x, unsigned __y)
+<DD><I>Assigns the specified coordinates to the point </I>
+<DT>
+<A HREF="#DOC.3.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A>& <B>operator += </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __delta)
+<DD><I>Translates the point by the coordinates of the specified point </I>
+<DT>
+<A HREF="#DOC.3.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A>& <B>operator -= </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __delta)
+<DD><I>Negatively translates the point by the coordinates of the specified point </I>
+<DT>
+<A HREF="#DOC.3.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> <B>operator + </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)
+<DD><I>Adds the coordinates of two points and returns the result as point </I>
+<DT>
+<A HREF="#DOC.3.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> <B>operator - </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)
+<DD><I>Substracts the coordinates of two points and returns the result as point </I>
+<DT>
+<A HREF="#DOC.3.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A>& <B>operator = </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)
+<DD><I>Assigns the point the coordinates of the specified point </I>
+<DT>
+<A HREF="#DOC.3.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>operator == </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)
+<DD><I>Compares the coordinates of two points and returns true if they are equal </I>
+<DT>
+<A HREF="#DOC.3.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>operator != </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)
+<DD><I>Compares the coordinates of two points and returns false if they are equal </I>
+<DT>
+<A HREF="#DOC.3.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>operator < </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)
+<DD><I>Compares the coordinates of two points and returns true if the first one is nearer to the origin </I>
+<DT>
+<A HREF="#DOC.3.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>operator > </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)
+<DD><I>Compares the coordinates of two points and returns true if the second one is nearer to the origin </I>
+<DT>
+<A HREF="#DOC.3.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>operator <= </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)
+<DD><I>Compares the coordinates of two points and returns true if the first one is nearer or as far as the second one from the origin </I>
+<DT>
+<A HREF="#DOC.3.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool <B>operator >= </B>(<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)
+<DD><I>Compares the coordinates of two points and returns true if the second one is nearer or as far as the first one from the origin </I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU">
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>The XPoint class is the two dimensional representation of a
+geometrical point with the coordinates x and y. Methods to assign
+coordinates and operators for mathematical calculation are included.
+
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="x">
+<A NAME="DOC.3.14">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned x</B></TT>
+<DD>X coordinate of the point
+<DL><DT><DD></DL><P>
+<A NAME="y">
+<A NAME="DOC.3.15">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned y</B></TT>
+<DD>Y coordinate of the point
+<DL><DT><DD></DL><P>
+<A NAME="XPoint">
+<A NAME="DOC.3.16">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XPoint()</B></TT>
+<DD>Constructs a clean point with the coordinates (0, 0)
+<DL><DT><DD></DL><P>
+<A NAME="XPoint">
+<A NAME="DOC.3.1">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> XPoint(unsigned __x, unsigned __y)</B></TT>
+<DD>Constructs a new point with the coordinates (__x, __y)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__x</B> -  x coordinate
+<BR><B>__y</B> -  y coordinate<BR><DD></DL><P>
+<A NAME="Assign">
+<A NAME="DOC.3.2">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void Assign(unsigned __x, unsigned __y)</B></TT>
+<DD>Assigns the specified coordinates to the point
+
+<DL><DT><DT><B>Parameters:</B><DD><B>__x</B> -  x coordinate
+<BR><B>__y</B> -  y coordinate<BR><DD></DL><P>
+<A NAME="operator += ">
+<A NAME="DOC.3.3">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A>& operator += (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __delta)</B></TT>
+<DD>Translates the point by the coordinates of the specified point
+
+<DL><DT><DT><B>Returns:</B><DD>translated point
+<DT><B>Parameters:</B><DD><B>__delta</B> -  translation vector
+<BR><DD></DL><P>
+<A NAME="operator -= ">
+<A NAME="DOC.3.4">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A>& operator -= (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __delta)</B></TT>
+<DD>Negatively translates the point by the coordinates of the specified
+point
+
+<DL><DT><DT><B>Returns:</B><DD>translated point
+<DT><B>Parameters:</B><DD><B>__delta</B> -  translation vector
+<BR><DD></DL><P>
+<A NAME="operator + ">
+<A NAME="DOC.3.5">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> operator + (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)</B></TT>
+<DD>Adds the coordinates of two points and returns the result as point
+
+<DL><DT><DT><B>Returns:</B><DD>sum of points
+<DT><B>Parameters:</B><DD><B>__p</B> -  right operand
+<BR><DD></DL><P>
+<A NAME="operator - ">
+<A NAME="DOC.3.6">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> operator - (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)</B></TT>
+<DD>Substracts the coordinates of two points and returns the result as
+point
+
+<DL><DT><DT><B>Returns:</B><DD>difference of points
+<DT><B>Parameters:</B><DD><B>__p</B> -  right operand
+<BR><DD></DL><P>
+<A NAME="operator = ">
+<A NAME="DOC.3.7">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="XPoint.html#DOC.3.16">XPoint</A>& operator = (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)</B></TT>
+<DD>Assigns the point the coordinates of the specified point
+
+<DL><DT><DT><B>Returns:</B><DD>assigned point
+<DT><B>Parameters:</B><DD><B>__p</B> -  value to assign
+<BR><DD></DL><P>
+<A NAME="operator == ">
+<A NAME="DOC.3.8">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator == (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)</B></TT>
+<DD>Compares the coordinates of two points and returns true if they are
+equal
+
+<DL><DT><DT><B>Returns:</B><DD>true if equal 
+<DT><B>Parameters:</B><DD><B>__p</B> -  right operand
+<BR><DD></DL><P>
+<A NAME="operator != ">
+<A NAME="DOC.3.9">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator != (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)</B></TT>
+<DD>Compares the coordinates of two points and returns false if they are
+equal
+
+<DL><DT><DT><B>Returns:</B><DD>false if equal
+<DT><B>Parameters:</B><DD><B>__p</B> -  right operand
+<BR><DD></DL><P>
+<A NAME="operator < ">
+<A NAME="DOC.3.10">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator < (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)</B></TT>
+<DD>Compares the coordinates of two points and returns true if the first
+one is nearer to the origin
+
+<DL><DT><DT><B>Returns:</B><DD>true if smaller
+<DT><B>Parameters:</B><DD><B>__p</B> -  right operand
+<BR><DD></DL><P>
+<A NAME="operator > ">
+<A NAME="DOC.3.11">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator > (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)</B></TT>
+<DD>Compares the coordinates of two points and returns true if the second
+one is nearer to the origin
+
+<DL><DT><DT><B>Returns:</B><DD>true if greater
+<DT><B>Parameters:</B><DD><B>__p</B> -  right operand
+<BR><DD></DL><P>
+<A NAME="operator <= ">
+<A NAME="DOC.3.12">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator <= (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)</B></TT>
+<DD>Compares the coordinates of two points and returns true if the first
+one is nearer or as far as the second one from the origin
+
+<DL><DT><DT><B>Returns:</B><DD>true if smaller or equal
+<DT><B>Parameters:</B><DD><B>__p</B> -  right operand
+<BR><DD></DL><P>
+<A NAME="operator >= ">
+<A NAME="DOC.3.13">
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator >= (<!1><A HREF="XPoint.html#DOC.3.16">XPoint</A> __p)</B></TT>
+<DD>Compares the coordinates of two points and returns true if the second
+one is nearer or as far as the first one from the origin
+
+<DL><DT><DT><B>Returns:</B><DD>true if greater or equal
+<DT><B>Parameters:</B><DD><B>__p</B> -  right operand
+<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<br>
+Go to the <a href="hierarchy.html">hierarchy of classes</a>.
+<br>
+
+<br><hr>
+Copyright &copy;1998 <a href="mailto:slice@t-online.de">Bernd Kalbfuss</a><br>
+Last update on October 27, 2001<br><br>
+
+This page was generated with the help of <a href="http://docpp.sourceforge.net">DOC++</a>.
+</body>
+
+</html>

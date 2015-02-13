@@ -1,0 +1,58 @@
+Xterminal v1.0.x
+December 22, 2002
+INSTALL: Installation procedures
+Copyright (c) 1996-2002 Dragos Acostachioaie
+
+Requirements:
+  * gcc 2.6.8 or better
+  * ncurses 1.8.6 or better
+  * gpm 1.10 or better (optional)
+  * S-Lang 1.0 or better (optional)
+
+The steps in order to compile this package are:
+  1. `cd' to the directory containing the package's source code and type
+     `./configure' to configure the package for your system. If you're
+     using `csh' on an old version of System V, you might need to type
+     `sh ./configure' instead to prevent `csh' from trying to execute
+     `configure' itself.
+
+     Running `configure' takes awhile. While running, it prints some
+     messages telling which features it is checking for.
+
+     The `configure' script is generated from `configure.in' by GNU's autoconf
+     and it attempts to guess correct values for various system-dependent
+     variables used during compilation. It also creates the Makefiles needed to
+     compile the package and a `.h' file containing system-dependent
+     definitions;
+
+  2. Type `make' to compile the package;
+
+  3. Type `make install' to install the library, the header files and the
+     documentation. This operation should be done logged on as root;
+
+  4. Type `make examples' if you wish to see some test programs. This will
+     create some `ex*' files in the `example' directory;
+
+  5. You can remove the library and object files from the source directory by
+     typing `make clean'. To also remove the files that `configure' created
+     (so you can compile the package for a different kind of system), type
+     `make distclean';
+
+  6. Type `make uninstall' to remove the library, the header files and the
+     documentation from the destination directories.
+
+Installation directories
+    By default, `make install' will install the package's files in
+    `/usr/include', `/usr/lib', etc. You can specify an installation prefix
+    other than `/usr' by giving `configure' the option `--prefix=PATH'.
+
+Other features and options
+    --disable-shared to build a static version of the library
+      instead of a shared one;
+    --disable-signals to disable signals catching;
+    --enable-debug to enable generation of debugging informations;
+    --without-gpm if you don't want GPM mouse support;
+    --with-slang to use S-Lang library instead of ncurses.
+    For other options, type `./configure --help'.
+
+Hope you have already read the `README' file.
