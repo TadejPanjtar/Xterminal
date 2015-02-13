@@ -22,6 +22,7 @@
 
 #include <xtmenu.h>
 #include <xtapp.h>
+#include <string.h>
 
 XtApplication::XtApplication() :
   XtDesktop(XRect(XPoint(1, 1), XGetSize()))

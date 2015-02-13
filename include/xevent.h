@@ -29,8 +29,8 @@
 #pragma interface
 #endif
 
-#include <deque.h>
-#include <multimap.h>
+#include <deque>
+#include <map>
 
 #include <xbclass.h>
 
@@ -190,8 +190,8 @@ class XEventBroker
   virtual bool SendMessage(unsigned long __Receiver, unsigned long __Class, void *__Body, unsigned long __Size);
 
  protected:
-  typedef multimap < unsigned, unsigned long, less < const unsigned > > Map;
-  typedef pair < const unsigned, unsigned long > KeyValPair;
+  typedef std::map< unsigned, unsigned long> Map;
+  typedef std::pair < const unsigned, unsigned long > KeyValPair;
 
   /// map for binding listeners to events
   Map __map;

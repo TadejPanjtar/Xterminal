@@ -9,7 +9,7 @@
   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 */
 
-#include <stream.h>
+#include <iostream>
 #include <string>
 
 #include <xterminal.h>
@@ -45,7 +45,7 @@ class MyXtWindow : public XtWindow
 
   virtual bool ProcessMouseEvent(XMouseEvent *__Event)
     {
-    string s;
+	    std::string s;
     if(__Event->Type == type && type == EV_MOUSEDOWN)
       {
       s = "mouse click at (";

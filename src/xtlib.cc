@@ -21,7 +21,8 @@
 */
 
 #include <signal.h>
-#include <stream.h>
+#include <stdlib.h>
+#include <iostream>
 #include <string>
 #include <sys/ioctl.h>
 #ifndef GWINSZ_IN_SYS_IOCTL

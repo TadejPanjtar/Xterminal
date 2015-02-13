@@ -31,7 +31,7 @@ XtStaticText::XtStaticText(XRect __r, unsigned __Alignment, const char *__Text) 
   XObject(__r)
 {
   strcpy(ObjClass, "XtStaticText");
-  Text = new string(__Text);
+  Text = new std::string(__Text);
   Alignment = __Alignment;
   SetPalette(P_STATICTEXT, P_STATICTEXT_LEN);
 }
@@ -44,8 +44,8 @@ XtStaticText::~XtStaticText()
 void XtStaticText::Draw()
 {
   unsigned i, lines = 1;
-  string::iterator index, begin = Text->begin();
-  string::iterator end = Text->end();
+  std::string::iterator index, begin = Text->begin();
+  std::string::iterator end = Text->end();
   XPoint pos;
   div_t x, y;
   i = 1;
@@ -123,8 +123,8 @@ void XtStaticText::SetValue(const char *__Text)
 {
   if(GetState(SM_VISIBLE) && strlen(__Text) < Text->length())
     {
-    string::iterator index = Text->begin();
-    string::iterator end = Text->end();
+    std::string::iterator index = Text->begin();
+    std::string::iterator end = Text->end();
     for(; index != end; index++)
       if(*index != '\n')
         *index = ' ';
@@ -211,7 +211,7 @@ void XtContextualHelp::SetContext(unsigned long __Context)
 
 void XtContextualHelp::SetValue(unsigned long __Context, const char *__Text)
 {
-  string *temp;
+  std::string *temp;
   ContextsMap::iterator index = ContextMap.begin();
   ContextsMap::iterator end = ContextMap.end();
   bool found = false;
@@ -225,7 +225,7 @@ void XtContextualHelp::SetValue(unsigned long __Context, const char *__Text)
     (*index).second->assign(__Text, strlen(__Text) + 1);
    else
     {
-    temp = new string(__Text, strlen(__Text) + 1);
+    temp = new std::string(__Text, strlen(__Text) + 1);
     ContextsKeyValPair *pair = new ContextsKeyValPair(__Context, temp);
     ContextMap.insert(*pair);
     }

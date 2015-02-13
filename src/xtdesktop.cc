@@ -21,6 +21,8 @@
 */
 
 #include <xtdesktop.h>
+#include <string.h>
+
 
 XtBackground::XtBackground(XRect __r, chtype __ch) :
   XObject(__r)

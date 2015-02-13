@@ -407,7 +407,7 @@ void XtMenu::Draw()
   MenuItem *index = Items, *child = 0;
   unsigned i = 0, j = 0;
   XPoint child_p;
-  string s;
+  std::string s;
   XSetColor(GetPalEntry(P_MENU_SURFACE), GetPalEntry(P_MENU_SURFACE + 1));
   XFillWindow(Bounds, ' ');
   for(; index; index = index->Next)
@@ -447,7 +447,7 @@ void XtMenu::DrawChildMenu(XPoint __p, MenuItem *__Item)
   MenuItem *index = __Item->Child, *child = 0;
   unsigned i = 0, j = 1, max_tlen = 0, max_klen = 0, max_len;
   XPoint child_p;
-  string s;
+  std::string s;
   while(index)
     {
     if(!(index->Value & MENU_ITEM_DISABLED) || !(Flags & HIDE_DISABLED_ITEMS))
@@ -609,7 +609,7 @@ bool XtMenu::ProcessKeyboardEvent(XKeyboardEvent *__Event)
   XKeyboardEvent *event;
   MenuItem *temp, *old;
   bool value;
-  string s;
+  std::string s;
   if(!Items)
     return false;
   switch(__Event->KeyCode)
@@ -875,7 +875,7 @@ bool XtMenu::ProcessMouseEvent(XMouseEvent *__Event)
   XKeyboardEvent *event;
   XRect r;
   MenuItem *index, *temp;
-  string s;
+  std::string s;
   unsigned i;
   if(!Items)
     return false;
@@ -1048,7 +1048,7 @@ void XtStatusLine::Draw()
 {
   StatusItem *index = Items;
   unsigned i = 0, k = 0, shortcut = 0;
-  string s;
+  std::string s;
   XSetColor(GetPalEntry(P_STATUSLINE_SURFACE), GetPalEntry(P_STATUSLINE_SURFACE + 1));
   XFillWindow(Bounds, ' ');
   for(; index; index = index->Next)
@@ -1107,7 +1107,7 @@ bool XtStatusLine::ProcessMouseEvent(XMouseEvent *__Event)
   XMessage *msg;
   StatusItem *index;
   unsigned i = Bounds.a.x;
-  string s;
+  std::string s;
   if(__Event->Type == EV_MOUSEDOWN && Bounds.Contains(__Event->Position))
     {
     for(index = Items; index; index = index->Next)

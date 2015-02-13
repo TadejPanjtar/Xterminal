@@ -298,7 +298,7 @@ class XtHList : public XObject {
 	 <p><b>HLIST_CURSOR_WRAP</b> - make the list a circular one
 	 <p><b>HLIST_SELECT_LIMIT</b> - hide the items that are disabled
   */
-  XtHList(XRect __r, unsigned long __Flags, unsigned int __max_selectable = 1);
+  XtHList(XRect __r, unsigned long __Flags, unsigned int __max_selectable);
 
   /// Destructs the object's instance
   ~XtHList();
@@ -316,10 +316,10 @@ class XtHList : public XObject {
   unsigned int NumberSelected() const;
 
   /// Return the key values associated with the selected items
-  void SelectedKeys(vector<unsigned long>& values) const;
+  void SelectedKeys(std::vector<unsigned long>& values) const;
 
   /// Return the texts of the selected items
-  void SelectedStrings(vector<char *>& values) const;
+  void SelectedStrings(std::vector<char *>& values) const;
 
   /** Add a node to the hierarchical list
       @param __Text text to be displayed
@@ -330,13 +330,13 @@ class XtHList : public XObject {
 	   <p><b>HLI_OPEN</b> - Only for nodes/branches, branch is open.
 	   <p><b>HLI_DISABLED</b> - Item is disabled (not completely implemented).
   */
-  virtual int AddNode( char *__Text, int state = HLI_NONE );
+  virtual int AddNode( char *__Text, int state);
 
   /// Add a node to node to_node in the hierarchical list
-  virtual bool AddNode(const char *to_node, char *text, int state = HLI_NONE);
+  virtual bool AddNode(const char *to_node, char *text, int state);
 
   /// Add a item to node to_node in the hierarchical list
-  virtual bool Add(const char *to_node, char *text, unsigned long key, int state = HLI_NONE);
+  virtual bool Add(const char *to_node, char *text, unsigned long key, int state);
 
   /** "Runs" the list: waits for events until an item is chosen or the
       dialog is closed

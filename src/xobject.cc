@@ -298,8 +298,8 @@ bool XObjectEventListener::ProcessBroadcast(XEvent *__Event)
   return false;
 }
 
-typedef multimap < unsigned long, XObject*, less < const unsigned long > > ObjectsMap;
-typedef pair < const unsigned long, XObject* > ObjectsKeyValPair;
+typedef std::map < unsigned long, XObject* > ObjectsMap;
+typedef std::pair < const unsigned long, XObject* > ObjectsKeyValPair;
 
 // map for binding Ids to XObjects
 ObjectsMap _ObjectsMap;

@@ -45,6 +45,8 @@ extern "C"
 
 #include <xbclass.h>
 #include <xevent.h>
+#include <string.h>
+#include <stdlib.h>     /* div, div_t */
 
 #ifndef chtype
 typedef unsigned long chtype;

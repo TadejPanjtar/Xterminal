@@ -29,7 +29,7 @@
 #endif
 
 #include <string>
-#include <multimap.h>
+#include <map>
 
 #include <xobject.h>
 #include <xtwindow.h>
@@ -70,7 +70,7 @@ class XtStaticText : public XObject {
  protected:
 
   /// Text
-  string *Text;
+  std::string *Text;
 
   /// Alignment style
   unsigned Alignment;
@@ -139,8 +139,8 @@ class XtContextualHelp : public XtStaticText {
  protected:
   unsigned long Flags, Context;
   XtWindow *Wnd;
-  typedef multimap < unsigned long, string *, less < const unsigned long > > ContextsMap;
-  typedef pair < const unsigned long, string * > ContextsKeyValPair;
+  typedef std::map < unsigned long, std::string * > ContextsMap;
+  typedef std::pair < const unsigned long, std::string * > ContextsKeyValPair;
   ContextsMap ContextMap;
 };
 

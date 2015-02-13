@@ -28,7 +28,7 @@
 #include <xevent.h>
 #include <xobject.h>
 
-deque < XEvent* > _EventQueue;
+std::deque < XEvent* > _EventQueue;
 
 void ClearEvent(XEvent *__Ev)
 {

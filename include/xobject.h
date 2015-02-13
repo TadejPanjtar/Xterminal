@@ -29,8 +29,8 @@
 #pragma interface
 #endif
 
-#include <list.h>
-#include <multimap.h>
+#include <list>
+#include <map>
 
 #include <xevent.h>
 
@@ -231,7 +231,7 @@ class XObject : public XEventBroker, public XObjectEventListener {
   */
   XObject *Server;
 
-  typedef list < XObject * > ClientList;
+  typedef std::list < XObject * > ClientList;
 
   /// Linked list of object's registered clients
   ClientList Clients;

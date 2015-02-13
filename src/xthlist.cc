@@ -130,7 +130,7 @@ void XtHList::ClearSelected()
   number_selected = 0;
 }
 
-void XtHList::SelectedKeys(vector<unsigned long>& values) const
+void XtHList::SelectedKeys(std::vector<unsigned long>& values) const
 {
   XtHLItem *item = root;
 
@@ -144,7 +144,7 @@ void XtHList::SelectedKeys(vector<unsigned long>& values) const
     }
 }
 
-void XtHList::SelectedStrings(vector<char *>& values) const
+void XtHList::SelectedStrings(std::vector<char *>& values) const
 {
   XtHLItem *item = root;
 
